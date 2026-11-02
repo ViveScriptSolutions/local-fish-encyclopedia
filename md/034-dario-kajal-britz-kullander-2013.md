@@ -10,7 +10,7 @@
 
 ### শনাক্তকরণ
 
-serial 35-এর মতোই ট্যাক্সন: ক্ষুদ্র badid (সর্বোচ্চ 20 mm SL), চোখের কক্ষের মধ্য দিয়ে সোজা চলা একরঙা কালো ডোরার দ্বারা নির্ণীত, কোনো কোণ তৈরি না করে — 'kajal' কাজল চিহ্ন (Zakir প্রমুখ 2019)। পুরুষরা ফ্যাকাশে লাল, জোড়া পৃষ্ঠ ডোরা ও স্পষ্ট postorbital ডোরাসহ (মাস্টার)। Badis থেকে আলাদা ছোট আকার, লালচে-হালকা বাদামি রঙ, বাঁকবিহীন পুচ্ছপাখনা, দৃশ্যমান পার্শ্বরেখা নেই এবং লম্বা পৃষ্ঠ/বক্ষ পাখনার রশ্মি দ্বারা।
+ক্ষুদ্র badid (সর্বোচ্চ 20 mm SL), চোখের কক্ষের (orbit) মধ্য দিয়ে কোনো কোণ না বানিয়ে সোজা চলে যাওয়া একরঙা কালো ডোরার দ্বারা নির্ণীত — 'kajal' কাজল চিহ্ন (Zakir প্রমুখ 2019)। পুরুষরা ফ্যাকাশে লাল, জোড়া পৃষ্ঠ ডোরা ও স্পষ্ট postorbital ডোরাসহ (master)। Badis থেকে পৃথক — ছোট আকার, লালচে-হালকা বাদামি রঙ, বাঁকবিহীন পুচ্ছপাখনা, দৃশ্যমান পার্শ্বরেখা না থাকা, এবং লম্বা পৃষ্ঠ/বক্ষ পাখনার রশ্মি দ্বারা।
 
 ### দৈহিক বৈশিষ্ট্য
 
@@ -26,7 +26,7 @@ serial 35-এর মতোই ট্যাক্সন: ক্ষুদ্র ba
 
 ### বাংলাদেশে বিস্তৃতি
 
-serial 35-এর মতোই তিনটি স্থান (Zakir প্রমুখ 2019): ইলেঙ্গজানী নদীর খাল, টাঙ্গাইল (ব্রহ্মপুত্রের শাখা, মধ্য বাংলাদেশ); ধলাই নদীর কাছের রাস্তার পাশের নালা; জাল্লাগাং নদী (দুটোই উত্তর-পূর্ব বাংলাদেশ) — মোট 8টি নমুনা। উত্তর-পূর্বের ছোট স্বদেশী; বাংলাদেশে গণের প্রথম নথি। প্রমাণ-স্তর: নিশ্চিত জেলা নথি।
+তিনটি নথিভুক্ত স্থান (Zakir প্রমুখ 2019): ইলেঙ্গজানী নদীর খাল, টাঙ্গাইল (ব্রহ্মপুত্রের শাখা, মধ্য বাংলাদেশ); ধলাই নদীর কাছের রাস্তার পাশের নালা; জাল্লাগাং নদী (শেষ দুটি উত্তর-পূর্ব বাংলাদেশে) — মোট 8টি নমুনা। উত্তর-পূর্বের ছোট স্বদেশী প্রজাতি; বাংলাদেশে গণের প্রথম নথি। প্রমাণ-স্তর: নিশ্চিত জেলা নথি।
 
 ### দক্ষিণ এশিয়ায় বিস্তৃতি
 
@@ -60,7 +60,7 @@ serial 35-এর মতোই তিনটি স্থান (Zakir প্র�
 
 ### Identification `[High]`
 
-Same taxon as serial 35: miniature badid (max 20 mm SL) diagnosed by the uniform black stripe running straight through the orbit without forming an angle — the 'kajal' eyeliner mark (Zakir et al. 2019). Males pale red with paired dorsal bars and the prominent postorbital stripe (master). Separated from Badis by small size, reddish-beige colour, uncurved caudal fin, no visible lateral line, and longer dorsal/pectoral fin rays.
+Miniature badid (max 20 mm SL) diagnosed by the uniform black stripe running straight through the orbit without forming an angle — the 'kajal' eyeliner mark (Zakir et al. 2019). Males pale red with paired dorsal bars and the prominent postorbital stripe (master). Separated from Badis by small size, reddish-beige colour, uncurved caudal fin, no visible lateral line, and longer dorsal/pectoral fin rays.
 
 ### Physical Characteristics `[Moderate]`
 
@@ -76,7 +76,7 @@ Small shallow pools with stagnant to slow-flowing, often turbid water; densely v
 
 ### Bangladesh Distribution `[High]`
 
-Same three localities as serial 35 (Zakir et al. 2019): Elengjani River canal, Tangail (Brahmaputra distributary, central Bangladesh); roadside ditch near the Dhalai River; Jallagang River (both northeastern Bangladesh) — 8 specimens total. Northeastern small native; first genus record for Bangladesh. Evidence level: Confirmed District Record.
+Three documented localities (Zakir et al. 2019): Elengjani River canal, Tangail (Brahmaputra distributary, central Bangladesh); roadside ditch near the Dhalai River; Jallagang River (both northeastern Bangladesh) — 8 specimens total. Northeastern small native; first genus record for Bangladesh. Evidence level: Confirmed District Record.
 
 ### South Asian Distribution `[High]`
 

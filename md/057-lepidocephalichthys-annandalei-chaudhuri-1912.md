@@ -59,7 +59,7 @@
 
 ### গবেষণা ঘাটতি
 
-প্রজনন জীববিজ্ঞান, খাদ্য, আচরণ, দ্বিরূপতা, আয়ুষ্কাল এবং captive care নথিভুক্ত নয়। 9 cm বৈশ্বিক বনাম 5 cm বাংলাদেশ সর্বোচ্চ-দৈর্ঘ্যের অমিল যাচাই প্রয়োজন। জনসংখ্যার প্রবণতা অজানা এবং 2000 বনাম 2015 জাতীয় মূল্যায়ন সাংঘর্ষিক। মাতামুহুরী hill-stream রেকর্ড বাস্তুতান্ত্রিক অনুসরণের দাবি রাখে। সবচেয়ে গুরুত্বপূর্ণ, এই সিরিয়াল master database-এ সিরিয়াল 62-এর দ্বৈত এবং দুটিকে একত্রিত করা উচিত।
+প্রজনন জীববিজ্ঞান, খাদ্য, আচরণ, দ্বিরূপতা, আয়ুষ্কাল এবং captive care নথিভুক্ত নয়। 9 cm বৈশ্বিক বনাম 5 cm বাংলাদেশ সর্বোচ্চ-দৈর্ঘ্যের অমিল যাচাই প্রয়োজন। জনসংখ্যার প্রবণতা অজানা এবং 2000 বনাম 2015 জাতীয় মূল্যায়ন সাংঘর্ষিক। মাতামুহুরী hill-stream রেকর্ড বাস্তুতান্ত্রিক অনুসরণের দাবি রাখে। সবচেয়ে গুরুত্বপূর্ণ, এই ট্যাক্সনের একত্রীকৃত দ্বৈত entry-এর সাথে master-list-এর দ্বৈততার নিষ্পত্তি নিশ্চিত করা উচিত (change log দেখুন)।
 
 ## In English
 
@@ -113,4 +113,4 @@ Unknown. No captive-care literature was found; the species is of no fisheries in
 
 ### Research Gaps `[High]`
 
-Breeding biology, diet, behaviour, dimorphism, lifespan, and captive care are undocumented. The 9 cm global vs 5 cm Bangladesh maximum-length discrepancy needs verification. Population trend is unknown and the 2000 vs 2015 national assessments conflict. The Matamuhuri hill-stream record deserves ecological follow-up. Most importantly, this serial duplicates serial 62 in the master database and the two should be merged.
+Breeding biology, diet, behaviour, dimorphism, lifespan, and captive care are undocumented. The 9 cm global vs 5 cm Bangladesh maximum-length discrepancy needs verification. Population trend is unknown and the 2000 vs 2015 national assessments conflict. The Matamuhuri hill-stream record deserves ecological follow-up. Most importantly, the master-list duplication with the merged duplicate entry of this taxon should be confirmed as resolved (see change log).

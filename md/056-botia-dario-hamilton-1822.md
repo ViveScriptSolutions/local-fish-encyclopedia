@@ -43,7 +43,7 @@ master database অনুযায়ী Confirmed District Record। উল্�
 
 ### প্রজনন
 
-সিরিয়াল 60 প্রোফাইলের মতো: captive breeding শুধু নিয়ন্ত্রিত পরীক্ষামূলক অবস্থায় নথিভুক্ত (2 m ব্যাসের ট্যাংক, নিয়ন্ত্রণযোগ্য স্রোত 1000-5000 L/h; pH 7.5-8.5, hardness 20-35 mg/L, conductivity 110-180 uS, dissolved oxygen 7.6-8 mg/L, 27-32 C); প্রায় 14.5 ঘণ্টায় ডিম ফোটে, ডিম ফোটার প্রায় 21 ঘণ্টা পর larvae সাঁতার কাটে ও Paramecium খায়, তারপর Artemia ও zooplankton, সন্তান-যত্ন ছাড়াই (aquainfo.nl-এর মাধ্যমে বৈজ্ঞানিক নিবন্ধ)। সাধারণ home aquarium-এ প্রজনন হয় না (Loaches Online)। বাংলাদেশের পানিতে বন্য প্রজনন নথিভুক্ত নয় (অজানা)।
+Captive breeding শুধু নিয়ন্ত্রিত পরীক্ষামূলক অবস্থায় নথিভুক্ত (2 m ব্যাসের ট্যাংক, নিয়ন্ত্রণযোগ্য স্রোত 1000-5000 L/h; pH 7.5-8.5, hardness 20-35 mg/L, conductivity 110-180 uS, dissolved oxygen 7.6-8 mg/L, 27-32 C); প্রায় 14.5 ঘণ্টায় ডিম ফোটে, ডিম ফোটার প্রায় 21 ঘণ্টা পর larvae সাঁতার কাটে ও খায় — প্রথমে Paramecium, পরে Artemia ও zooplankton — সন্তান-যত্ন ছাড়াই (aquainfo.nl-এর মাধ্যমে বৈজ্ঞানিক নিবন্ধ)। সাধারণ home aquarium-এ প্রজনন হয় না (Loaches Online)। বাংলাদেশের পানিতে বন্য প্রজনন নথিভুক্ত নয় (Unknown)।
 
 ### আয়ু ও বৃদ্ধি
 
@@ -51,15 +51,15 @@ master database অনুযায়ী Confirmed District Record। উল্�
 
 ### সংরক্ষণ অবস্থা
 
-বৈশ্বিক: Least Concern (IUCN 2010)। বাংলাদেশ: Endangered (IUCN Bangladesh, master database এন্ট্রি অনুযায়ী)। master database ধান-চাষের কীটনাশক থেকে হুমকি উল্লেখ করে। অমিল লক্ষণীয়: সিরিয়াল 60 2000 Red Book-এর Endangered তালিকা উদ্ধৃত করে, আর এই এন্ট্রি বছর ছাড়া IUCN Bangladesh Endangered উদ্ধৃত করে; বর্তমান জাতীয় মূল্যায়ন অবস্থা 2015 Red List-এর বিপরীতে যাচাই করা উচিত। বাংলাদেশে প্রবণতা হ্রাসমান বলে অনুমিত তবে অপরিমাপিত।
+বৈশ্বিক: Least Concern (IUCN 2010)। বাংলাদেশ: Endangered (IUCN Bangladesh, master database entry অনুযায়ী)। Master database ধান-চাষের কীটনাশক থেকে হুমকি উল্লেখ করে। অমিল লক্ষণীয়: একত্রীকৃত দ্বৈত entry 2000 Red Book-এর Endangered তালিকা উদ্ধৃত করে, অথচ এই entry বছর ছাড়া IUCN Bangladesh Endangered উদ্ধৃত করে; বর্তমান জাতীয় মূল্যায়ন অবস্থা 2015 Red List-এর বিপরীতে যাচাই করা উচিত। বাংলাদেশে প্রবণতা হ্রাসমান বলে অনুমিত, তবে অপরিমাপিত।
 
 ### অ্যাকুরিয়াম পরিচর্যা
 
-সিরিয়াল 60 প্রোফাইলের মতো: কমপক্ষে 100 L-এ (বড় পছন্দনীয়) 5-6+ সংখ্যার দল; বালুকাময় বা মিহি গোল-কিনারার নুড়ি; প্রচুর গুহা, কাঠ ও পাথরের আচ্ছাদন; মৃদু আলো; মাঝারি স্রোতসহ পরিপক্ব, স্থিতিশীল, অত্যন্ত পরিষ্কার পানি; সাপ্তাহিক 30-50% পানি বদল; আঁটসাঁট ঢাকনা। পানি: pH 6.8-7.5, নরম থেকে মাঝারি hardness, 24-28 C। দিনে কয়েকবার ছোট খাবারে বৈচিত্র্যময় সর্বভুক খাদ্য; শামুক পছন্দ করে। চাপ ও খারাপ পানির গুণমানে সংবেদনশীল; আঁশহীন-মাছের মাত্রায় ich-এর চিকিৎসা করুন। সর্বত্র trade literature।
+কমপক্ষে 100 L-এ (বড় হলে ভালো) 5-6+ সংখ্যার দল; বালুকাময় বা মিহি গোল-কিনারার নুড়ি; প্রচুর গুহা, কাঠ ও পাথরের আচ্ছাদন; মৃদু আলো; মাঝারি স্রোতসহ পরিপক্ব, স্থিতিশীল, অত্যন্ত পরিষ্কার পানি; সাপ্তাহিক 30-50% পানি বদল; আঁটসাঁট ঢাকনা। পানি: pH 6.8-7.5, নরম থেকে মাঝারি hardness, 24-28 C। দিনে কয়েকবার ছোট খাবারে বৈচিত্র্যময় সর্বভুক খাদ্য; শামুক পছন্দ করে। চাপ ও খারাপ পানির গুণমানে সংবেদনশীল; আঁশহীন-মাছের মাত্রায় ich-এর চিকিৎসা করুন। সর্বত্র trade literature।
 
 ### গবেষণা ঘাটতি
 
-বন্য প্রজনন, বৃদ্ধি, আয়ুষ্কাল এবং জনসংখ্যার প্রবণতা নথিভুক্ত নয়। বর্তমান IUCN Bangladesh জাতীয় অবস্থা যাচাই প্রয়োজন (কোন মূল্যায়নে Endangered: 2000 না 2015?)। প্লাবনভূমির জনগোষ্ঠীর বিপরীতে প্রচুর CHT ঝিরি-জনগোষ্ঠীর বাস্তুতান্ত্রিক তাৎপর্য অনধ্যয়িত। সর্বোপরি, master list-এ সিরিয়াল 60-এর সঙ্গে দ্বৈততার নিষ্পত্তি প্রয়োজন (change log দেখুন)।
+বন্য প্রজনন, বৃদ্ধি, আয়ুষ্কাল এবং জনসংখ্যার প্রবণতা নথিভুক্ত নয়। বর্তমান IUCN Bangladesh জাতীয় অবস্থা যাচাই প্রয়োজন (কোন মূল্যায়নে Endangered: 2000 নাকি 2015?)। প্লাবনভূমির জনগোষ্ঠীর বিপরীতে প্রচুর CHT ঝিরি-জনগোষ্ঠীর বাস্তুতান্ত্রিক তাৎপর্য অনধ্যয়িত। সর্বোপরি, একত্রীকৃত দ্বৈত entry-এর সাথে master-list-এর দ্বৈততার নিষ্পত্তি নিশ্চিত করা উচিত (change log দেখুন)।
 
 ## In English
 
@@ -97,7 +97,7 @@ Wild diet: aquatic molluscs (snails), insects, worms, and other invertebrates; a
 
 ### Breeding And Reproduction `[Moderate]`
 
-As in the serial 60 profile: captive breeding is documented only under controlled experimental conditions (2 m diameter tank, adjustable flow 1000-5000 L/h; pH 7.5-8.5, hardness 20-35 mg/L, conductivity 110-180 uS, dissolved oxygen 7.6-8 mg/L, 27-32 C); eggs hatched in about 14.5 hours, larvae swam and fed about 21 hours post-hatch on Paramecium then Artemia and zooplankton, with no parental care (scientific article via aquainfo.nl). Not bred in ordinary home aquaria (Loaches Online). Wild spawning in Bangladesh waters is undocumented (Unknown).
+Captive breeding is documented only under controlled experimental conditions (2 m diameter tank, adjustable flow 1000-5000 L/h; pH 7.5-8.5, hardness 20-35 mg/L, conductivity 110-180 uS, dissolved oxygen 7.6-8 mg/L, 27-32 C); eggs hatched in about 14.5 hours, larvae swam and fed about 21 hours post-hatch on Paramecium then Artemia and zooplankton, with no parental care (scientific article via aquainfo.nl). Not bred in ordinary home aquaria (Loaches Online). Wild spawning in Bangladesh waters is undocumented (Unknown).
 
 ### Lifespan And Growth `[Unknown]`
 
@@ -105,12 +105,12 @@ Unknown from scientific sources. No published data on lifespan, growth rate, or 
 
 ### Conservation Status `[Moderate]`
 
-Global: Least Concern (IUCN 2010). Bangladesh: Endangered (IUCN Bangladesh, per the master database entry). The master database notes threats from rice-cultivation pesticides. Note the discrepancy: serial 60 cites the 2000 Red Book Endangered listing while this entry cites IUCN Bangladesh Endangered without a year; the current national assessment status should be verified against the 2015 Red List. Trend in Bangladesh is inferred decreasing but unquantified.
+Global: Least Concern (IUCN 2010). Bangladesh: Endangered (IUCN Bangladesh, per the master database entry). The master database notes threats from rice-cultivation pesticides. Note the discrepancy: the merged duplicate entry cited the 2000 Red Book Endangered listing while this entry cites IUCN Bangladesh Endangered without a year; the current national assessment status should be verified against the 2015 Red List. Trend in Bangladesh is inferred decreasing but unquantified.
 
 ### Captive Care Notes `[Moderate]`
 
-As in the serial 60 profile: groups of 5-6+ in at least 100 L (larger preferred); sandy or fine round-edged gravel; abundant caves, wood, and rock cover; subdued lighting; mature, stable, very clean water with moderate current; weekly 30-50% water changes; tight lid. Water: pH 6.8-7.5, soft to medium hardness, 24-28 C. Varied omnivorous diet with small feeds several times daily; relishes snails. Sensitive to stress and poor water quality; treat for ich at scaleless-fish dosage. Trade literature throughout.
+Groups of 5-6+ in at least 100 L (larger preferred); sandy or fine round-edged gravel; abundant caves, wood, and rock cover; subdued lighting; mature, stable, very clean water with moderate current; weekly 30-50% water changes; tight lid. Water: pH 6.8-7.5, soft to medium hardness, 24-28 C. Varied omnivorous diet with small feeds several times daily; relishes snails. Sensitive to stress and poor water quality; treat for ich at scaleless-fish dosage. Trade literature throughout.
 
 ### Research Gaps `[High]`
 
-Wild spawning, growth, lifespan, and population trends are undocumented. The current IUCN Bangladesh national status needs verification (Endangered in which assessment: 2000 or 2015?). The ecological significance of the abundant CHT stream populations versus the floodplain populations is unstudied. Above all, the duplication with serial 60 in the master list needs resolution (see change log).
+Wild spawning, growth, lifespan, and population trends are undocumented. The current IUCN Bangladesh national status needs verification (Endangered in which assessment: 2000 or 2015?). The ecological significance of the abundant CHT stream populations versus the floodplain populations is unstudied. Above all, the master-list duplication with the merged duplicate entry should be confirmed as resolved (see change log).

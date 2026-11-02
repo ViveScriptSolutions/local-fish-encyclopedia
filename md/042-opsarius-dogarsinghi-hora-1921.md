@@ -104,4 +104,4 @@ Trade literature only (Seriously Fish; sharpei-online): requires a large aquariu
 
 ### Research Gaps `[High]`
 
-Correction/confirmation of the authority year (1921 vs 1937); voucher re-examination of the Bangladesh (Sylhet) record; full breeding biology; diet; population size and trend; measured environmental tolerances; wild behaviour; clarification of the true range limits (Chindwin vs Barak vs Bangladesh).
+Correction/confirmation of the authority year (1921 vs 1921); voucher re-examination of the Bangladesh (Sylhet) record; full breeding biology; diet; population size and trend; measured environmental tolerances; wild behaviour; clarification of the true range limits (Chindwin vs Barak vs Bangladesh).

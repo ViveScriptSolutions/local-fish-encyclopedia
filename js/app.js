@@ -12,7 +12,14 @@ const STR = {
     photoBy:'ছবি', license:'লাইসেন্স', source:'উৎস পৃষ্ঠা', prev:'← আগের', next:'পরের →',
     topA:'শীর্ষ অগ্রাধিকার A', consP:'সংরক্ষণ অগ্রাধিকার (জাতীয় CR/EN — বাণিজ্য নিষেধ)',
     distIndex:'জেলা-ভিত্তিক সূচক', recorded:'টি রেকর্ডকৃত প্রজাতি',
-    brand:'বাংলাদেশের ছোট ও শোভাবর্ধক মাছ', sub:'১৪৭টি যাচাইকৃত প্রজাতির সচিত্র বৈজ্ঞানিক বিশ্বকোষ',
+    brand:'বাংলাদেশের ছোট ও শোভাবর্ধক মাছ', sub:'সচিত্র বৈজ্ঞানিক বিশ্বকোষ — কিউরেটেড সংগ্রহে ১৪৭টি প্রজাতি-প্রোফাইল',
+    verifiedN:'যাচাইকৃত', bdConf:'বাংলাদেশে নিশ্চিত', distConf:'জেলা-রেকর্ড নিশ্চিত', photoMiss:'ছবি নেই',
+    evidenceT:'প্রমাণ ও উৎস', verTax:'শ্রেণিবিন্যাস', verBd:'বাংলাদেশে উপস্থিতি', verDist:'জেলা-রেকর্ড',
+    verHab:'আবাস-শ্রেণি', verPhoto:'আলোকচিত্র', verCons:'সংরক্ষণ অবস্থা',
+    compare:'তুলনা', compareT:'প্রজাতি তুলনা', comparePick:'তুলনা করতে ২–৪টি প্রজাতি বেছে নিন',
+    hillCat1:'নিশ্চিত পাহাড়ি বিশেষজ্ঞ', hillCat2:'পাহাড়ি-সংশ্লিষ্ট', hillCat3:'পাহাড়ি অঞ্চলের সাধারণ মাছ', hillCat4:'যাচাই প্রয়োজন', hillPending:'শ্রেণিবিন্যাস চলমান',
+    family:'Family', habitat:'আবাস', verFilter:'যাচাই অবস্থা',
+    lastRev:'সর্বশেষ পর্যালোচনা', collNote:'প্রতিটি দাবির পেছনে উৎস — নিচে প্রমাণ দেখুন',
     explore:'ঘুরে দেখুন', hillDesc:'খাগড়াছড়ি, বান্দরবান, রাঙ্গামাটি ও সিলেটের ঝিরি-ছড়ার বিরল মাছ',
     aboutT:'গবেষণা পদ্ধতি', fallback:'(বাংলা অনুবাদ নেই — English পাঠ দেখানো হচ্ছে)',
     photos:'ছবিসহ প্রজাতি'},
@@ -25,7 +32,14 @@ const STR = {
     photoBy:'Photo', license:'License', source:'Source page', prev:'← Prev', next:'Next →',
     topA:'Top Priority A', consP:'Conservation priority (national CR/EN — no commercial use)',
     distIndex:'District index', recorded:'recorded species',
-    brand:'Small & Ornamental Fishes of Bangladesh', sub:'Illustrated scientific encyclopedia · 147 verified species',
+    brand:'Small & Ornamental Fishes of Bangladesh', sub:'Illustrated scientific encyclopedia · 147 species profiles in the curated collection',
+    verifiedN:'Verified', bdConf:'BD occurrence confirmed', distConf:'District records confirmed', photoMiss:'No photo',
+    evidenceT:'Evidence & Sources', verTax:'Taxonomy', verBd:'Bangladesh occurrence', verDist:'District records',
+    verHab:'Habitat classification', verPhoto:'Photograph', verCons:'Conservation status',
+    compare:'Compare', compareT:'Species comparison', comparePick:'Pick 2–4 species to compare',
+    hillCat1:'Confirmed hill-stream specialists', hillCat2:'Hill-stream-associated', hillCat3:'General freshwater in hill regions', hillCat4:'Needs verification', hillPending:'Classification pending',
+    family:'Family', habitat:'Habitat', verFilter:'Verification',
+    lastRev:'Last reviewed', collNote:'Every claim carries its source — see Evidence below',
     explore:'Explore', hillDesc:'Rare fishes of the hill streams of Khagrachari, Bandarban, Rangamati & Sylhet',
     aboutT:'Research methodology', fallback:'',
     photos:'Species with photos'},
@@ -73,55 +87,88 @@ function secLabel(f){ return lang==='bn' ? (SEC_BN[f]||f) : f.replace(/_/g,' ').
 /* ---------- views ---------- */
 function vHome(){
   const hill = DB.filter(s=>s.hill_stream);
+  const v = d => DB.filter(s=>s.verification && s.verification[d] && ['verified','confirmed','checked'].includes(s.verification[d].status)).length;
   app.innerHTML = `<h1>${T('brand')}</h1><p>${T('sub')}</p>
   <div class="statgrid">
     <div class="stat"><div class="n">${META.total}</div><div class="l">${T('species')}</div></div>
-    <div class="stat"><div class="n">${META.hill_stream}</div><div class="l">${T('hill')}</div></div>
-    <div class="stat"><div class="n">${META.with_photo}</div><div class="l">${T('photos')}</div></div>
-    <div class="stat"><div class="n">${META.priorities.A}</div><div class="l">${T('priority')} A</div></div>
+    <div class="stat"><div class="n">${v('taxonomy')}</div><div class="l">${T('verTax')} ✓</div></div>
+    <div class="stat"><div class="n">${v('bangladesh_occurrence')}</div><div class="l">${T('bdConf')}</div></div>
+    <div class="stat"><div class="n">${v('district_occurrence')}</div><div class="l">${T('distConf')}</div></div>
+    <div class="stat"><div class="n">${DB.filter(s=>s.verification&&s.verification.photograph.status==='missing').length}</div><div class="l">${T('photoMiss')}</div></div>
     <div class="stat"><div class="n">${META.families.length}</div><div class="l">Family</div></div>
   </div>
+  <p style="font-size:13px;color:var(--grey)">${T('lastRev')}: 3 November 2026 · ${T('collNote')}</p>
   <h2>⭐ ${T('topA')}</h2>
   <div class="grid">${DB.filter(s=>s.priority==='A').sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,8).map(card).join('')}</div>
   <h2>⛰️ ${T('hill')}</h2><p>${T('hillDesc')}</p>
   <div class="grid">${hill.slice(0,4).map(card).join('')}</div>
   <p><a href="#/hillstream">${T('explore')} →</a></p>`;
 }
-let F = {q:'', rarity:'', breeding:'', priority:'', origin:'', hill:false, photo:false};
+let F = {q:'', rarity:'', breeding:'', priority:'', origin:'', family:'', habitat:'', ver:'', hill:false, photo:false};
+function habitatGroup(s){
+  const t = ((s.en.natural_habitat&&s.en.natural_habitat.text)||'').toLowerCase();
+  if(/hill stream|hill-stream|torrential|rapids|riffle|fast-flow/.test(t)) return 'hill';
+  if(/estuar|mangrove|tidal|brackish|marine|coast|lagoon/.test(t)) return 'estuary';
+  if(/pond|ditch|paddy|beel|haor|wetland|floodplain|swamp|marsh|baor|jheel/.test(t)) return 'wetland';
+  if(/river|stream|canal/.test(t)) return 'river';
+  return 'other';
+}
 function vBrowse(){
   const rar = [...new Set(DB.map(s=>s.rarity))].sort();
   const br = [...new Set(DB.map(s=>s.breeding_potential).filter(Boolean))].sort();
+  const fams = [...new Set(DB.map(s=>s.family))].sort();
   app.innerHTML = `<h1>🔍 ${T('browse')}</h1>
   <div class="toolbar">
     <input type="search" id="fq" placeholder="${T('search')}" value="${esc(F.q)}">
     <select id="fr"><option value="">${T('rarity')}: ${T('all')}</option>${rar.map(r=>`<option ${F.rarity===r?'selected':''}>${r}</option>`).join('')}</select>
     <select id="fb"><option value="">${T('breeding')}: ${T('all')}</option>${br.map(r=>`<option ${F.breeding===r?'selected':''}>${r}</option>`).join('')}</select>
-    <select id="fp"><option value="">${T('priority')}: ${T('all')}</option>${['A','B','C'].map(r=>`<option ${F.priority===r?'selected':''}>${r}</option>`).join('')}</select>
+    <select id="fp"><option value="">${T('priority')}: ${T('all')}</option>${['A','B','C','IE'].map(r=>`<option ${F.priority===r?'selected':''}>${r}</option>`).join('')}</select>
     <select id="fo"><option value="">${T('origin')}: ${T('all')}</option>
       <option value="N" ${F.origin==='N'?'selected':''}>${T('native')}</option>
       <option value="E" ${F.origin==='E'?'selected':''}>${T('exotic')}</option></select>
+    <select id="ffam"><option value="">${T('family')}: ${T('all')}</option>${fams.map(r=>`<option ${F.family===r?'selected':''}>${r}</option>`).join('')}</select>
+    <select id="fhb"><option value="">${T('habitat')}: ${T('all')}</option>
+      ${['hill','river','wetland','estuary','other'].map(r=>`<option value="${r}" ${F.habitat===r?'selected':''}>${r}</option>`).join('')}</select>
+    <select id="fv"><option value="">${T('verFilter')}: ${T('all')}</option>
+      <option value="bd" ${F.ver==='bd'?'selected':''}>${T('bdConf')}</option>
+      <option value="dist" ${F.ver==='dist'?'selected':''}>${T('distConf')}</option>
+      <option value="nophoto" ${F.ver==='nophoto'?'selected':''}>${T('photoMiss')}</option></select>
     <label><input type="checkbox" id="fh" ${F.hill?'checked':''}> ${T('hillOnly')}</label>
     <label><input type="checkbox" id="fph" ${F.photo?'checked':''}> ${T('photoOnly')}</label>
   </div>
   <p class="count" id="fcount"></p><div class="grid" id="fgrid"></div>`;
   const upd = ()=>{
-    F = {q: fq.value, rarity: fr.value, breeding: fb.value, priority: fp.value, origin: fo.value, hill: fh.checked, photo: fph.checked};
+    F = {q: fq.value, rarity: fr.value, breeding: fb.value, priority: fp.value, origin: fo.value,
+         family: ffam.value, habitat: fhb.value, ver: fv.value, hill: fh.checked, photo: fph.checked};
     const q = F.q.toLowerCase();
     const list = DB.filter(s =>
       (!q || (s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')+' '+s.family+' '+s.genus).toLowerCase().includes(q)) &&
       (!F.rarity || s.rarity===F.rarity) && (!F.breeding || s.breeding_potential===F.breeding) &&
       (!F.priority || s.priority===F.priority) &&
       (!F.origin || (F.origin==='N' ? s.native_status==='Native' : s.native_status!=='Native')) &&
+      (!F.family || s.family===F.family) && (!F.habitat || habitatGroup(s)===F.habitat) &&
+      (!F.ver || (F.ver==='bd' ? s.verification.bangladesh_occurrence.status==='confirmed'
+                : F.ver==='dist' ? s.verification.district_occurrence.status==='confirmed'
+                : s.verification.photograph.status==='missing')) &&
       (!F.hill || s.hill_stream) && (!F.photo || s.image.thumb || s.image.url));
     fcount.textContent = `${list.length} ${T('showing')}`;
     fgrid.innerHTML = list.map(card).join('') || `<p>${T('noPhoto')}</p>`;
   };
-  for(const id of ['fq','fr','fb','fp','fo','fh','fph']) document.getElementById(id).addEventListener('input', upd);
+  for(const id of ['fq','fr','fb','fp','fo','ffam','fhb','fv','fh','fph']) document.getElementById(id).addEventListener('input', upd);
   upd();
 }
 function vHill(){
-  const list = DB.filter(s=>s.hill_stream);
-  app.innerHTML = `<h1>⛰️ ${T('hill')} (${list.length})</h1><p>${T('hillDesc')}</p><div class="grid">${list.map(card).join('')}</div>`;
+  const cats = [[1,'hillCat1','⛰️'],[2,'hillCat2','🏞️'],[3,'hillCat3','🐟'],[4,'hillCat4','❓']];
+  let h = `<h1>⛰️ ${T('hill')}</h1><p>${T('hillDesc')}</p>`;
+  const hillSpp = DB.filter(s=>s.hill_stream || s.hill_category);
+  for(const [c,key,emo] of cats){
+    const list = hillSpp.filter(s=>s.hill_category===c);
+    if(!list.length) continue;
+    h += `<h2>${emo} ${T(key)} (${list.length})</h2><div class="grid">${list.map(card).join('')}</div>`;
+  }
+  const pend = hillSpp.filter(s=>!s.hill_category);
+  if(pend.length) h += `<h2>⏳ ${T('hillPending')} (${pend.length})</h2><div class="grid">${pend.map(card).join('')}</div>`;
+  app.innerHTML = h;
 }
 function fieldRows(sp){
   let h = '';
@@ -134,6 +181,20 @@ function fieldRows(sp){
     h += `<tr><td>${secLabel(f)}</td><td>${esc(txt)}${conf}${fb?` <span class="conf">${T('fallback')}</span>`:''}</td></tr>`;
   }
   return h ? `<table class="fields">${h}</table>` : '';
+}
+function evidenceSection(sp){
+  if(!sp.verification) return '';
+  const dims = [['taxonomy',T('verTax')],['bangladesh_occurrence',T('verBd')],['district_occurrence',T('verDist')],
+                ['habitat_classification',T('verHab')],['photograph',T('verPhoto')],['conservation',T('verCons')]];
+  const col = st => ['verified','confirmed','checked','confirmed_specialist'].includes(st) ? '#1a7a3c'
+    : ['disputed','insufficient','missing'].includes(st) ? '#b00020' : '#9a7b00';
+  let h = `<h3>🔬 ${T('evidenceT')}</h3><table class="fields">`;
+  for(const [k,label] of dims){
+    const d = sp.verification[k]; if(!d) continue;
+    h += `<tr><td>${label}</td><td><span class="badge" style="background:${col(d.status)}">${esc(d.status.replace(/_/g,' '))}</span> <span style="font-size:13px;color:var(--grey)">${esc(d.note||'')}</span></td></tr>`;
+  }
+  h += `</table>`;
+  return h;
 }
 function vSpecies(sn){
   const sp = DB.find(s=>s.serial===sn);
@@ -164,6 +225,7 @@ function vSpecies(sn){
   }
   const refs = [...new Set(ORDER.flatMap(f=>sp.en[f]?sp.en[f].references:[]))].slice(0,8);
   if(refs.length) h += `<h3>${T('refs')}</h3><p style="font-size:13px">${refs.map(r=>{const m=r.match(/https?:\/\/\S+/);return m?`<a href="${m[0]}" target="_blank" rel="noopener">${esc(r.slice(0,90))}</a>`:esc(r.slice(0,120));}).join('<br>')}</p>`;
+  h += evidenceSection(sp);
   h += `</div></div><div class="pager"><span>${prev?`<a href="#/species/${prev.serial}">${T('prev')}: <span class="sci">${esc(prev.scientific_name)}</span></a>`:''}</span><span>${next?`<a href="#/species/${next.serial}"><span class="sci">${esc(next.scientific_name)}</span> :${T('next')}</a>`:''}</span></div>`;
   app.innerHTML = h;
   window.scrollTo(0,0);
@@ -177,6 +239,43 @@ function vPriority(){
   <h2><span class="badge b-B">B</span> — ${mk('B').length}</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('B').map(row).join('')}</table>
   <h2><span class="badge b-P">C</span> — ${T('consP')} (${mk('C').length})</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('C').map(row).join('')}</table>
   ${ie.length?`<h2><span class="badge b-IE">IE</span> — ${lang==='bn'?'অপর্যাপ্ত প্রমাণ (Insufficient Evidence)':'Insufficient Evidence'} (${ie.length})</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${ie.map(row).join('')}</table>`:''}`;
+}
+let CMP = [];
+function vCompare(){
+  app.innerHTML = `<h1>⚖️ ${T('compareT')}</h1><p>${T('comparePick')}</p>
+  <div class="toolbar"><input type="search" id="cq" placeholder="${T('search')}"></div>
+  <div class="grid" id="cres"></div><div id="ctab"></div>`;
+  const short = (sp,f,n) => { const t = sp.en[f]&&sp.en[f].text||''; return esc(t.length>n?t.slice(0,n)+'…':t); };
+  const render = ()=>{
+    if(!CMP.length){ ctab.innerHTML=''; return; }
+    const rows = [
+      [lang==='bn'?'ছবি':'Photo', sp=>sp.image.thumb?`<img src="${sp.image.thumb}" alt="${esc(altText(sp))}" style="max-width:150px" onerror="this.remove()">`:'—'],
+      [lang==='bn'?'বাংলা নাম':'Bengali name', sp=>esc(sp.bengali_name||'—')],
+      ['Family', sp=>esc(sp.family)],
+      [T('maxSize'), sp=>sp.max_size_cm?esc(sp.max_size_cm)+' cm':'—'],
+      [T('rarity'), sp=>sp.rarity],
+      [T('priority'), sp=>sp.priority||'—'],
+      [T('breeding'), sp=>esc(sp.breeding_potential||'—')],
+      [secLabel('natural_habitat'), sp=>short(sp,'natural_habitat',220)],
+      [secLabel('bangladesh_distribution'), sp=>short(sp,'bangladesh_distribution',220)],
+      [secLabel('captive_care_notes'), sp=>short(sp,'captive_care_notes',220)],
+      [secLabel('conservation_status'), sp=>short(sp,'conservation_status',220)],
+    ];
+    ctab.innerHTML = `<table class="list cmp"><tr><th></th>${CMP.map(sp=>`<th><a href="#/species/${sp.serial}"><span class="sci">${esc(sp.scientific_name)}</span></a><br><button data-rm="${sp.serial}">✕</button></th>`).join('')}</tr>` +
+      rows.map(([l,fn])=>`<tr><td><b>${l}</b></td>${CMP.map(sp=>`<td>${fn(sp)}</td>`).join('')}</tr>`).join('') + `</table>`;
+    ctab.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{CMP=CMP.filter(s=>s.serial!==+b.dataset.rm);render();});
+  };
+  cq.addEventListener('input', ()=>{
+    const q = cq.value.toLowerCase().trim();
+    if(q.length<2){ cres.innerHTML=''; return; }
+    const list = DB.filter(s=>(s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')).toLowerCase().includes(q))
+      .filter(s=>!CMP.includes(s)).slice(0,6);
+    cres.innerHTML = list.map(s=>`<div class="card" style="cursor:pointer" data-add="${s.serial}"><div class="body"><div class="t"><span class="sci">${esc(s.scientific_name)}</span></div><div class="bn">${esc(s.bengali_name||'')}</div></div></div>`).join('');
+    cres.querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>{
+      if(CMP.length<4){ CMP.push(DB.find(s=>s.serial===+el.dataset.add)); cq.value=''; cres.innerHTML=''; render(); }
+    });
+  });
+  render();
 }
 const DIST = ["Khagrachari","Bandarban","Rangamati","Sylhet","Moulvibazar","Habiganj","Chattogram","Cox's Bazar","Noakhali","Cumilla","Feni","Lakshmipur","Dhaka"];
 function vDistricts(){
@@ -202,13 +301,14 @@ function route(){
   document.querySelectorAll('[data-nav]').forEach(a=>a.classList.remove('on'));
   const h = location.hash || '#/';
   const [,page,arg] = h.split('/');
-  const nav = {undefined:'home','browse':'browse','hillstream':'hillstream','priority':'priority','districts':'districts','district':'districts','about':'about'}[page]||'home';
+  const nav = {undefined:'home','browse':'browse','hillstream':'hillstream','priority':'priority','compare':'compare','districts':'districts','district':'districts','about':'about'}[page]||'home';
   const el = document.querySelector(`[data-nav="${nav}"]`); if(el) el.classList.add('on');
   try{
     if(page==='browse') vBrowse();
     else if(page==='hillstream') vHill();
     else if(page==='species') vSpecies(+arg);
     else if(page==='priority') vPriority();
+    else if(page==='compare') vCompare();
     else if(page==='districts') vDistricts();
     else if(page==='district') vDistrict(decodeURIComponent(arg||''));
     else if(page==='about') vAbout();

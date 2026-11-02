@@ -9,15 +9,15 @@
 
 ### শনাক্তকরণ
 
-serial 33-এর মতোই ট্যাক্সন: truncate পুচ্ছপাখনা (কিছু একই-গণের প্রজাতির lunate/emarginate-এর বিপরীতে), সাদা-সীমাযুক্ত পাখনা, পুরুষের পায়ু পাখনায় অনিয়মিত প্রান্ত (Seriously Fish; Aquarium Glaser)। প্রায়ই O. melastigma (অবৈধ) বা O. javanicus (স্বতন্ত্র) হিসেবে ভুল শনাক্ত হয়। O. carnaticus-এর সাথে meristics পরস্পর-অতিক্রমী (Thomas প্রমুখ 2016)।
+Truncate পুচ্ছপাখনা (বেশ কিছু একই-গণের প্রজাতির lunate/emarginate-এর বিপরীতে), সাদা-সীমাযুক্ত পাখনা, পুরুষের পায়ু পাখনায় অনিয়মিত প্রান্ত (Seriously Fish; Aquarium Glaser)। প্রায়ই O. melastigma (অবৈধ) বা O. javanicus (স্বতন্ত্র) হিসেবে ভুল শনাক্ত হয়। O. carnaticus-এর সাথে meristics পরস্পর-অতিক্রমী (Thomas প্রমুখ 2016)।
 
 ### দৈহিক বৈশিষ্ট্য
 
-সর্বোচ্চ দৈর্ঘ্য 3.1–3.5 cm (মাস্টারে serial 33-এর জন্য 3.1 cm; Seriously Fish 35 mm SL)। ছোট, পার্শ্বীয়ভাবে চ্যাপ্টা ricefish, রুপালি-স্বচ্ছ; পুরুষরা প্রজনন অবস্থায় গাঢ় হয়, সাদা-প্রান্তযুক্ত পাখনাসহ। মাতামুহুরী জরিপ পাহাড়ি-অংশের নমুনাগুলোর জন্য পৃথক আকার তথ্য দেয়নি।
+সর্বোচ্চ দৈর্ঘ্য 3.1–3.5 cm (master database: 3.1 cm; Seriously Fish: 35 mm SL)। ছোট, পার্শ্বীয়ভাবে চ্যাপ্টা ricefish, রুপালি-স্বচ্ছ; পুরুষরা প্রজনন অবস্থায় গাঢ় হয়, সাদা-প্রান্তযুক্ত পাখনাসহ। মাতামুহুরী জরিপ পাহাড়ি-অংশের নমুনাগুলোর জন্য পৃথক আকার-তথ্য দেয়নি।
 
 ### পুরুষ ও স্ত্রী
 
-serial 33-এর মতো: পুরুষরা সরু, লম্বা পাখনা, পায়ু পাখনার অনিয়মিত প্রান্ত, ডিম ছাড়ার সময় গাঢ় হয় ও অঞ্চল রক্ষা করে; স্ত্রীরা উদ্ভিদে জমা দেওয়ার আগে আঠালো ডিমের গুচ্ছ বহন করে।
+পুরুষরা সরু দেহের, লম্বা পাখনা, পায়ু পাখনার অনিয়মিত প্রান্ত, ডিম ছাড়ার সময় গাঢ় রঙ ধারণ করে ও অঞ্চল রক্ষা করে; স্ত্রীরা উদ্ভিদে জমা দেওয়ার আগে আঠালো ডিমের গুচ্ছ বহন করে (fishywiki; Aquarium Glaser)।
 
 ### আবাসস্থল
 
@@ -25,11 +25,11 @@ serial 33-এর মতো: পুরুষরা সরু, লম্বা প
 
 ### বাংলাদেশে বিস্তৃতি
 
-বান্দরবান পাহাড়ি জেলার উজান মাতামুহুরী নদীতে নথিভুক্ত: জানুয়ারি–ডিসেম্বর 2022-এ সেখানে 95টি finfish প্রজাতি নথিভুক্ত হয়, এবং O. dancena জরিপের চারটি Data Deficient প্রজাতির একটি ছিল (Arshad & Azadi 2024)। জাতীয় অবস্থা: Data Deficient (IUCN Bangladesh 2015; Arshad & Azadi 2024)। প্রমাণ-স্তর: নিশ্চিত জেলা নথি। বৃহত্তর বাংলাদেশের নথি (হালদা, কর্ণফুলী, সাঙ্গু) serial 33-এর অধীনে নথিভুক্ত।
+বান্দরবান পার্বত্য জেলার ঊর্ধ্ব মাতামুহুরী নদীতে নথিভুক্ত: জানুয়ারি–ডিসেম্বর 2022-এ সেখানে 95টি finfish প্রজাতি নথিভুক্ত হয়, এবং O. dancena জরিপের চারটি Data Deficient প্রজাতির একটি ছিল (Arshad & Azadi 2024)। জাতীয় অবস্থা: Data Deficient (IUCN Bangladesh 2015; Arshad & Azadi 2024)। প্রমাণ-স্তর: নিশ্চিত জেলা নথি। এই ট্যাক্সনের জন্য বৃহত্তর বাংলাদেশের নথি (হালদা, কর্ণফুলী, সাঙ্গু) একত্রীকৃত দ্বৈত master entry-এর অধীনে নথিভুক্ত।
 
 ### দক্ষিণ এশিয়ায় বিস্তৃতি
 
-serial 33-এর মতোই: পূর্ব ও দক্ষিণ ভারত, শ্রীলঙ্কা, বাংলাদেশ, মিয়ানমার; দক্ষিণ থাইল্যান্ড।
+পূর্ব ও দক্ষিণ ভারত, শ্রীলঙ্কা, বাংলাদেশ, মিয়ানমার; দক্ষিণ থাইল্যান্ড (Seriously Fish; Magtoon & Termvidchakorn 2009)।
 
 ### পানির পরামিতি
 
@@ -49,7 +49,7 @@ serial 33-এর মতোই: পূর্ব ও দক্ষিণ ভার�
 
 ### অ্যাকুরিয়াম পরিচর্যা
 
-serial 33-এর মতো (বাণিজ্যিক সাহিত্য): 8+ দলের জন্য ≥45×30 cm ট্যাংক (~41 L), ঘন উদ্ভিদ, 23–27°C, pH 6.5–8.5, ছোট জীবন্ত/হিমায়িত খাবার; সূক্ষ্ম-পাতার উদ্ভিদে প্রজনন সহজ। পাহাড়ি-অংশের রূপের জন্য কোনো পৃথক নির্দেশিকা নেই।
+(Trade literature) 8+ সদস্যের দলের জন্য ≥45×30 cm ট্যাংক (~41 L), ঘন উদ্ভিদ-আচ্ছাদিত, 23–27°C, pH 6.5–8.5, ছোট জীবন্ত/হিমায়িত খাবার; সূক্ষ্ম-পাতার উদ্ভিদে প্রজনন সহজ। পাহাড়ি-অংশের রূপের জন্য কোনো পৃথক নির্দেশিকা নেই।
 
 ### গবেষণা ঘাটতি
 
@@ -59,15 +59,15 @@ serial 33-এর মতো (বাণিজ্যিক সাহিত্য): 
 
 ### Identification `[Moderate]`
 
-Same taxon as serial 33: truncate caudal fin (vs lunate/emarginate in several congeners), white-seamed fins, male anal fin with irregular border (Seriously Fish; Aquarium Glaser). Frequently misidentified as O. melastigma (invalid) or O. javanicus (distinct). Meristics overlap with O. carnaticus (Thomas et al. 2016).
+Truncate caudal fin (vs lunate/emarginate in several congeners), white-seamed fins, male anal fin with irregular border (Seriously Fish; Aquarium Glaser). Frequently misidentified as O. melastigma (invalid) or O. javanicus (distinct). Meristics overlap with O. carnaticus (Thomas et al. 2016).
 
 ### Physical Characteristics `[Moderate]`
 
-Maximum length 3.1–3.5 cm (master 3.1 cm for serial 33; Seriously Fish 35 mm SL). Small, laterally compressed ricefish, silvery-translucent; males darken in breeding condition with white-edged fins. The Matamuhury survey gives no separate size data for the hill-section specimens.
+Maximum length 3.1–3.5 cm (master database: 3.1 cm; Seriously Fish: 35 mm SL). Small, laterally compressed ricefish, silvery-translucent; males darken in breeding condition with white-edged fins. The Matamuhury survey gives no separate size data for the hill-section specimens.
 
 ### Male Vs Female `[Moderate]`
 
-As serial 33: males slimmer, elongated fins, irregular anal-fin border, darken and defend territories in spawning; females carry adhesive egg clusters before depositing them on plants (fishywiki; Aquarium Glaser).
+Males slimmer, elongated fins, irregular anal-fin border, darken and defend territories in spawning; females carry adhesive egg clusters before depositing them on plants (fishywiki; Aquarium Glaser).
 
 ### Natural Habitat `[Moderate]`
 
@@ -75,11 +75,11 @@ This serial's context is the freshwater hilly upstream section of the Matamuhury
 
 ### Bangladesh Distribution `[Moderate]`
 
-Recorded in the upper Matamuhury River, Bandarban Hill District: 95 finfish species were recorded there January–December 2022, and O. dancena was one of four Data Deficient species in the survey (Arshad & Azadi 2024). National status: Data Deficient (IUCN Bangladesh 2015; Arshad & Azadi 2024). Evidence level: Confirmed District Record. Broader Bangladesh records (Halda, Karnaphuli, Sangu) are documented under serial 33.
+Recorded in the upper Matamuhury River, Bandarban Hill District: 95 finfish species were recorded there January–December 2022, and O. dancena was one of four Data Deficient species in the survey (Arshad & Azadi 2024). National status: Data Deficient (IUCN Bangladesh 2015; Arshad & Azadi 2024). Evidence level: Confirmed District Record. Broader Bangladesh records (Halda, Karnaphuli, Sangu) are documented under the merged duplicate master entry for this taxon.
 
 ### South Asian Distribution `[High]`
 
-Same as serial 33: eastern and southern India, Sri Lanka, Bangladesh, Myanmar; southern Thailand (Seriously Fish; Magtoon & Termvidchakorn 2009).
+Eastern and southern India, Sri Lanka, Bangladesh, Myanmar; southern Thailand (Seriously Fish; Magtoon & Termvidchakorn 2009).
 
 ### Environmental Requirements `[Low]`
 
@@ -103,7 +103,7 @@ Global: Least Concern (IUCN 2019; Dahanukar et al.). Bangladesh: Data Deficient 
 
 ### Captive Care Notes `[Moderate]`
 
-As serial 33 (trade literature): ≥45×30 cm tank (~41 L) for groups of 8+, heavily planted, 23–27°C, pH 6.5–8.5, small live/frozen foods; easy to breed on fine-leaved plants. No separate guidance exists for the hill-section form.
+(Trade literature) ≥45×30 cm tank (~41 L) for groups of 8+, heavily planted, 23–27°C, pH 6.5–8.5, small live/frozen foods; easy to breed on fine-leaved plants. No separate guidance exists for the hill-section form.
 
 ### Research Gaps `[High]`
 
