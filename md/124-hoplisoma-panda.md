@@ -1,0 +1,111 @@
+# 124. Hoplisoma panda
+
+**Common name:** Panda corydoras
+**Family:** Callichthyidae | **Genus:** Hoplisoma | **Order:** Siluriformes
+**Rarity:** E | **Breeding:** High | **Priority:** 
+**Synonyms:** Corydoras panda
+**Photo:** [not stated](https://zoobox.de/fische-garnelen/fische/panzerwelse/55/panda-panzerwels) (not stated)
+
+## বাংলায়
+
+### শনাক্তকরণ
+
+সাথে-সাথে চেনা যায় এমন ছোট cory: off-white থেকে pinkish-orange ground রং, তিনটি কালো চিহ্নসহ — fontanel থেকে উল্লম্ব নেমে ventral head surface-এর আগে ত্রিভুজাকার wedge পর্যন্ত চোখের উপর mask, প্রায় পুরো পৃষ্ঠ পাখনা ঢাকা স্পষ্ট কালো blotch, এবং caudal peduncle ঘেরা কালো band। কিছু আলোতে পাশ ও operculum-এ ক্ষীণ সবুজাভ iridescence। তিন জোড়া barbel; দুই সারি bony flank plate; ধারালো pectoral কাঁটা যা জালে আটকায় ও sting করতে পারে।
+
+### দৈহিক বৈশিষ্ট্য
+
+পরিপক্ব স্ত্রীতে সর্বোচ্চ ৫৫ mm SL (Wikipedia); trade-এ সাধারণত ~৪–৫ cm TL, ~৩.৮ cm SL (Aquarist Atlas)। চ্যাপ্টা ventral surface-সহ মোটা, compact, গভীর-পেটের শরীর; ভোঁতা helmet-সদৃশ মাথা; নিচের দিকে মুখ। কালো-চিহ্নিত পৃষ্ঠ ছাড়া পাখনা hyaline/স্বচ্ছ, রঙিন ray-সহ। পরিপক্ব পুরুষের পাখনার অগ্রভাগ সামান্য বেশি সূঁচালো; স্ত্রী বড় হয় ও বেশি পূর্ণ-শরীর।
+
+### পুরুষ ও স্ত্রী
+
+উপর থেকে সেরা sexed: স্ত্রীর পেট বেশি গোলাকার এবং সামান্য বড় হওয়ার সম্ভাবনা (৫৫ mm SL পর্যন্ত); পুরুষ সামান্য ছোট, বেশি সূঁচালো পাখনার অগ্রভাগসহ।
+
+### আবাসস্থল
+
+Upper Amazon headwater: Peru (Huánuco অঞ্চল — Río Aquas, Río Amarillae, Río Pachitea উপনদী; Ucayali system-এ Río Aguaytía-ও) এবং প্রতিবেশী Ecuador (Catalog of Fishes)। বালি substrate-এর উপর প্রবাহিত স্বচ্ছ ও blackwater ঝিরি ও উপনদীতে বাস। অনেকগুলো Andean meltwater run-off-এ পুষ্ট; সেই সময়ে স্রোত বাড়ে এবং পানির তাপমাত্রা প্রায় ১৯ °C-এ নেমে যেতে পারে।
+
+### বাংলাদেশে বিস্তৃতি
+
+বাংলাদেশের native নয় — তুলনামূলক aquarium অধ্যায়ের জন্য অন্তর্ভুক্ত। পরামর্শকৃত উৎসে বাংলাদেশে কোনো introduced বা feral রেকর্ড পাওয়া যায়নি (confidence Moderate)। কার্যত সব trade মাছ farm-bred।
+
+### দক্ষিণ এশিয়ায় বিস্তৃতি
+
+দক্ষিণ এশিয়ার native নয়। Peru ও Ecuador-এর upper Amazon headwater-এর native (Ucayali drainage)। দক্ষিণ এশিয়ায় কোনো native পপুলেশন নেই।
+
+### পানির পরামিতি
+
+বন্য: স্বচ্ছ ও blackwater headwater ঝিরি যা Andean meltwater আসলে ~১৯ °C-এ ঠান্ডা হয়। AQUARIUM (SeriouslyFish): ২২–২৫ °C, pH ৬.০–৭.৪, ১–১২ dGH — tank-bred মাছ এই band-এ সুখী, তবে উষ্ণ পানিতে দীর্ঘমেয়াদে ভালো করবে না; আয়ু উল্লেখযোগ্যভাবে কমে। Aquarist Atlas ১৯–২৫ °C, pH ৬–৭.৪, GH ১৮ °dH পর্যন্ত রেকর্ড করে। ক্রান্তীয় band-এর ঠান্ডা প্রান্তে রাখুন — কখনো উষ্ণ discus ট্যাংকে নয়।
+
+### খাদ্য ও আচরণ
+
+বন্য: substrate ছেঁকে ছোট invertebrate, পোকার larva ও detritus খাওয়া সর্বভুক bottom-feeder। Aquarium-এ সহজ সর্বভুক: প্রধান হিসেবে ভালো sinking pellet/tablet, জীবন্ত/হিমায়িত Daphnia, Artemia ও bloodworm-এর পরিপূরকসহ। অতি শান্ত, অত্যন্ত সামাজিক — obligate shoaler; ন্যূনতম ৬ দল, ৮+ ভালো। Facultative air-breather (পৃষ্ঠে ছুটে যাওয়া স্বাভাবিক)। উল্লেখযোগ্যভাবে খারাপ হতে থাকা পানির মানের প্রথম নির্দেশক মাছ এবং bronze বা peppered cory-এর চেয়ে সামান্য কম hardy।
+
+### প্রজনন
+
+প্রজনন অতি ভালোভাবে নথিভুক্ত ও নির্ভরযোগ্য। Standard cory প্রোটোকল: ~১৮×১২×১২ in প্রজনন-ট্যাংক, বালি বা খালি তলাসহ, sponge filtration, java moss; ~২৪ °C, pH ~৬.৫; peat filtration ও RO পানি উপকারী। প্রতি স্ত্রীতে দুই পুরুষ; বৈচিত্র্যময় জীবন্ত/হিমায়িত/শুকনো খাদ্যে condition; বড় (৫০–৭০%) ঠান্ডা water change সাথে বর্ধিত oxygenation ও স্রোত দিয়ে trigger, দৈনিক পুনরাবৃত্তি। Classic 'T-position' spawning; ডিম ট্যাংক-কাঁচে পাড়া হয়, প্রায়ই উচ্চ-স্রোতের এলাকায়। প্রাপ্তবয়স্ক ডিম খায় — সরিয়ে নিন বা ডিম সরান (কাঁচ বরাবর মৃদুভাবে গড়িয়ে); fungus-এর বিরুদ্ধে methylene blue। ৩–৫ দিনে ডিম ফোটে; প্রথম খাদ্য microworm ও brine shrimp nauplii; fry পাতলা বালির স্তরের উপর ভালো।
+
+### সংরক্ষণ অবস্থা
+
+IUCN Red List: Near Threatened (২০১৪ মূল্যায়ন; Wikipedia, Aquarist Atlas)। এটি hobby চাপের বদলে upper Ucayali headwater-এ এর ছোট, সীমিত প্রাকৃতিক বিস্তৃতি প্রতিফলিত করে — কার্যত সব trade মাছ farm-bred। পরামর্শকৃত উৎসে নির্দিষ্ট বন্য হুমকি বিস্তারিত নয়।
+
+### অ্যাকুরিয়াম পরিচর্যা
+
+ছোট দলের জন্য ন্যূনতম ৪৫ × ৩০ cm ট্যাংক (~৪১ L) (SeriouslyFish)। মিহি বালি substrate অপরিহার্য (নোংরা বা মোটা substrate barbel ধ্বংস করে); নিখুঁত পরিষ্কার রাখুন, undergravel filtration নয়। Amazon biotope বা ভালো-রোপিত ট্যাংক; মৃদু আলো। খারাপ হতে থাকা পানিতে সংবেদনশীল — পরিপক্ব, স্থিতিশীল ট্যাংক প্রয়োজন, এবং stress দেখানো প্রথম প্রজাতি। ৬+ দল (৮+ ভালো)। ট্যাংক-সঙ্গী: ছোট characin, cyprinid, anabantoid, dwarf cichlid, অন্যান্য শান্ত catfish। ২০–২৫ °C-এ রাখুন; উষ্ণ ট্যাংকের জন্য নয়। ১৯৭০-এর দশকে অভিষেকে অত্যন্ত দামি; এখন mass-produced এবং সবচেয়ে জনপ্রিয় cory-গুলোর একটি।
+
+### গবেষণা ঘাটতি
+
+২০১৪ Near Threatened মূল্যায়নের পর থেকে বন্য প্রজনন-ecology ও পপুলেশন-প্রবণতা তথ্য অপ্রকাশিত। Farm strain-এর genetics এবং সীমিত বন্য পপুলেশনের সাথে তাদের সম্পর্ক অগবেষিত।
+
+## In English
+
+### Identification `[High]`
+
+Instantly recognisable small cory: off-white to pinkish-orange ground colour with three black markings — a mask over the eyes descending vertically from the fontanel to a triangular wedge before the ventral head surface, a conspicuous black blotch covering almost the entire dorsal fin, and a black band encircling the caudal peduncle. Faint greenish iridescence on flanks and operculum under some lighting. Three pairs of barbels; two rows of bony flank plates; sharp pectoral spines that catch in nets and can sting.
+
+### Physical Characteristics `[High]`
+
+Maximum 55 mm SL in mature females (Wikipedia); typically ~4-5 cm TL in trade, ~3.8 cm SL (Aquarist Atlas). Stocky, compact, deep-bellied body with flattened ventral surface; blunt helmet-like head; downturned mouth. Fins hyaline/translucent with coloured rays except the black-marked dorsal. Mature males have slightly more pointed fin tips; females grow larger and more full-bodied.
+
+### Male Vs Female `[Moderate]`
+
+Best sexed from above: females have a more rounded belly and are likely to be slightly larger (to 55 mm SL); males are slightly smaller with more pointed fin tips.
+
+### Natural Habitat `[High]`
+
+Upper Amazon headwaters: Peru (Huánuco region — Río Aquas, Río Amarillae, Río Pachitea tributaries; also Río Aguaytía in the Ucayali system) and neighbouring Ecuador (Catalog of Fishes). Inhabits clear and blackwater streams and tributaries, often flowing over sandy substrates. Many are fed by Andean meltwater run-off; at those times flow increases and water temperature can drop to around 19 °C.
+
+### Bangladesh Distribution `[Moderate]`
+
+Not native to Bangladesh — included for the comparative aquarium chapter. No introduced or feral records in Bangladesh were found in the sources consulted (confidence Moderate). Virtually all trade fish are farm-bred.
+
+### South Asian Distribution `[High]`
+
+Not native to South Asia. Native to the upper Amazon headwaters of Peru and Ecuador (Ucayali drainage). No native populations in South Asia.
+
+### Environmental Requirements `[High]`
+
+WILD: clear and blackwater headwater streams that cool to ~19 °C when Andean meltwater arrives. AQUARIUM (SeriouslyFish): 22-25 °C, pH 6.0-7.4, 1-12 dGH — tank-bred fish are happy in this band, but it will not do well long-term in warmer water; lifespan is reduced considerably. Aquarist Atlas records 19-25 °C, pH 6-7.4, GH to 18 °dH. Keep it at the cool end of the tropical band — never in a warm discus tank.
+
+### Feeding And Behaviour `[High]`
+
+Wild: omnivorous bottom-feeder sifting the substrate for small invertebrates, insect larvae and detritus. In aquaria an easy omnivore: good sinking pellets/tablets as staple, supplemented with live/frozen Daphnia, Artemia and bloodworm. Very peaceful, extremely social — obligate shoalers; groups of 6 minimum, 8+ better. A facultative air-breather (darts to the surface are normal). Notably the first fish to flag failing water quality and slightly less hardy than bronze or peppered corys.
+
+### Breeding And Reproduction `[High]`
+
+Breeding is very well documented and reliable. Standard cory protocol: breeding tank ~18×12×12 in with sand or bare bottom, sponge filtration, java moss; ~24 °C, pH ~6.5; peat filtration and RO water useful. Two males per female; condition on varied live/frozen/dried foods; trigger with a large (50-70%) cooler water change plus increased oxygenation and flow, repeated daily. Classic 'T-position' spawning; eggs are laid on tank glass, often in higher-flow areas. Adults eat the eggs — remove them or move the eggs (roll gently up the glass); methylene blue against fungus. Eggs hatch in 3-5 days; first foods microworm and brine shrimp nauplii; fry do better over a thin sand layer.
+
+### Lifespan And Growth `[Unknown]`
+
+Unknown — no published lifespan data were located in the sources consulted. SeriouslyFish notes that keeping it too warm long-term reduces its lifespan considerably. Growth data are likewise unpublished.
+
+### Conservation Status `[Moderate]`
+
+IUCN Red List: Near Threatened (assessed 2014; Wikipedia, Aquarist Atlas). This reflects its small, restricted natural range in the upper Ucayali headwaters rather than hobby pressure — virtually all trade fish are farm-bred. Specific wild threats are not detailed in the sources consulted.
+
+### Captive Care Notes `[High]`
+
+Minimum 45 × 30 cm tank (~41 L) for a small group (SeriouslyFish). Fine sand substrate is essential (dirty or coarse substrate destroys barbels); keep it scrupulously clean, no undergravel filtration. Amazon biotope or well-planted tank; dim lighting. Sensitive to deteriorating water — needs a mature, stable tank, and is the first species to show stress. Group of 6+ (8+ better). Tankmates: small characins, cyprinids, anabantoids, dwarf cichlids, other peaceful catfish. Keep at 20-25 °C; not for warm tanks. Wildly expensive on its 1970s debut; now mass-produced and one of the most popular corys.
+
+### Research Gaps `[Moderate]`
+
+Wild breeding ecology and population trend data since the 2014 Near Threatened assessment are unpublished. The genetics of farmed strains and their relationship to the restricted wild populations are unstudied.

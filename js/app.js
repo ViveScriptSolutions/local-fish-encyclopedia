@@ -1,0 +1,237 @@
+/* Fish Encyclopedia — client app. Data: data/species.json (edit it, no build step). */
+let DB = [], META = {};
+let lang = localStorage.getItem('fe_lang') || 'bn';
+
+const STR = {
+  bn: {home:'হোম', browse:'প্রজাতি', hill:'পাহাড়ি মাছ', prio:'অগ্রাধিকার', dist:'জেলা', about:'সম্পর্কে',
+    search:'খুঁজুন (বৈজ্ঞানিক / বাংলা / English নাম, family)…', all:'সব', rarity:'বিরলতা', breeding:'ব্রিডিং',
+    priority:'অগ্রাধিকার', origin:'উৎস', native:'দেশীয়', exotic:'Exotic', hillOnly:'শুধু পাহাড়ি', photoOnly:'শুধু ছবিসহ',
+    species:'প্রজাতি', showing:'টি দেখানো হচ্ছে', noPhoto:'ছবি নেই — field photography প্রয়োজন',
+    facts:'মূল তথ্য', genus:'গণ (Genus)', maxSize:'সর্বোচ্চ আকার', evidence:'প্রমাণ', synonyms:'প্রতিশব্দ',
+    refs:'তথ্যসূত্র', hillNotes:'পাহাড়ি নোট', morphs:'নথিভুক্ত morph', colours:'প্রাকৃতিক রঙ',
+    photoBy:'ছবি', license:'লাইসেন্স', source:'উৎস পৃষ্ঠা', prev:'← আগের', next:'পরের →',
+    topA:'শীর্ষ অগ্রাধিকার A', consP:'সংরক্ষণ অগ্রাধিকার (জাতীয় CR/EN — বাণিজ্য নিষেধ)',
+    distIndex:'জেলা-ভিত্তিক সূচক', recorded:'টি রেকর্ডকৃত প্রজাতি',
+    brand:'বাংলাদেশের ছোট ও শোভাবর্ধক মাছ', sub:'১৪৭টি যাচাইকৃত প্রজাতির সচিত্র বৈজ্ঞানিক বিশ্বকোষ',
+    explore:'ঘুরে দেখুন', hillDesc:'খাগড়াছড়ি, বান্দরবান, রাঙ্গামাটি ও সিলেটের ঝিরি-ছড়ার বিরল মাছ',
+    aboutT:'গবেষণা পদ্ধতি', fallback:'(বাংলা অনুবাদ নেই — English পাঠ দেখানো হচ্ছে)'},
+  en: {home:'Home', browse:'Species', hill:'Hill-stream', prio:'Priority', dist:'Districts', about:'About',
+    search:'Search (scientific / Bengali / common name, family)…', all:'All', rarity:'Rarity', breeding:'Breeding',
+    priority:'Priority', origin:'Origin', native:'Native', exotic:'Exotic', hillOnly:'Hill-stream only', photoOnly:'With photo',
+    species:'species', showing:'shown', noPhoto:'No photo — field photography needed',
+    facts:'Key facts', genus:'Genus', maxSize:'Max size', evidence:'Evidence', synonyms:'Synonyms',
+    refs:'References', hillNotes:'Hill-stream notes', morphs:'Documented morphs', colours:'Natural colours',
+    photoBy:'Photo', license:'License', source:'Source page', prev:'← Prev', next:'Next →',
+    topA:'Top Priority A', consP:'Conservation priority (national CR/EN — no commercial use)',
+    distIndex:'District index', recorded:'recorded species',
+    brand:'Small & Ornamental Fishes of Bangladesh', sub:'Illustrated scientific encyclopedia · 147 verified species',
+    explore:'Explore', hillDesc:'Rare fishes of the hill streams of Khagrachari, Bandarban, Rangamati & Sylhet',
+    aboutT:'Research methodology', fallback:''}
+};
+const SEC_BN = {identification:'শনাক্তকরণ', physical_characteristics:'দৈহিক বৈশিষ্ট্য',
+  male_vs_female:'পুরুষ ও স্ত্রী', natural_habitat:'আবাসস্থল', bangladesh_distribution:'বাংলাদেশে বিস্তৃতি',
+  south_asian_distribution:'দক্ষিণ এশিয়ায় বিস্তৃতি', environmental_requirements:'পানির পরামিতি (বন্য / অ্যাকুরিয়াম)',
+  feeding_and_behaviour:'খাদ্য ও আচরণ', breeding_and_reproduction:'প্রজনন', lifespan_and_growth:'আয়ু ও বৃদ্ধি',
+  conservation_status:'সংরক্ষণ অবস্থা', captive_care_notes:'অ্যাকুরিয়াম উপযোগিতা', research_gaps:'গবেষণা ঘাটতি'};
+const HILL_BN = {stream_current_preference:'স্রোত', oxygen_demand:'অক্সিজেন', rock_gravel_substrate_use:'তলদেশ',
+  flowing_water_adaptations:'স্রোত-অভিযোজন', adhesive_structures_or_special_morphology:'আঠালো গঠন',
+  seasonal_habitat_changes:'মৌসুমি পরিবর্তন', monsoon_breeding_pattern:'বর্ষা প্রজনন',
+  flash_flood_vulnerability:'আকস্মিক বন্যা ঝুঁকি', captive_environment_requirements:'captive পরিবেশ',
+  specialized_aquarium_setup:'বিশেষ aquarium সেটআপ', captive_breeding_challenges:'captive breeding চ্যালেঞ্জ'};
+const ORDER = ['identification','physical_characteristics','male_vs_female','natural_habitat',
+  'bangladesh_distribution','south_asian_distribution','environmental_requirements','feeding_and_behaviour',
+  'breeding_and_reproduction','lifespan_and_growth','conservation_status','captive_care_notes','research_gaps'];
+
+const esc = s => String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const T = k => STR[lang][k];
+const app = document.getElementById('app');
+
+function badges(sp){
+  let h = `<span class="badge b-${sp.rarity}">${sp.rarity}</span>`;
+  if(sp.breeding_potential) h += ` <span class="badge" style="background:#5b7fa6">${lang==='bn'?'ব্রিডিং':'Breeding'}: ${esc(sp.breeding_potential)}</span>`;
+  if(sp.priority) h += ` <span class="badge b-${sp.priority}">${lang==='bn'?'অগ্রাধিকার':'Priority'} ${sp.priority}</span>`;
+  if(sp.native_status!=='Native') h += ` <span class="badge b-E">EXOTIC</span>`;
+  return `<div class="badges">${h}</div>`;
+}
+function thumb(sp, cls){
+  if(sp.image.thumb) return `<img src="${sp.image.thumb}" alt="${esc(sp.scientific_name)}" loading="lazy">`;
+  return `<div class="nophoto">${T('noPhoto')}</div>`;
+}
+function card(sp){
+  return `<a class="card" href="#/species/${sp.serial}">
+    ${thumb(sp)}
+    <div class="body"><div class="t"><span class="sci">${esc(sp.scientific_name)}</span></div>
+    <div class="bn">${esc(sp.bengali_name||sp.english_common_name||'')}</div>${badges(sp)}</div></a>`;
+}
+function secLabel(f){ return lang==='bn' ? (SEC_BN[f]||f) : f.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase()); }
+
+/* ---------- views ---------- */
+function vHome(){
+  const hill = DB.filter(s=>s.hill_stream);
+  app.innerHTML = `<h1>${T('brand')}</h1><p>${T('sub')}</p>
+  <div class="statgrid">
+    <div class="stat"><div class="n">${META.total}</div><div class="l">${T('species')}</div></div>
+    <div class="stat"><div class="n">${META.hill_stream}</div><div class="l">${T('hill')}</div></div>
+    <div class="stat"><div class="n">${META.with_photo}</div><div class="l">${T('photoOnly').replace('শুধু ','').replace('With ','')}</div></div>
+    <div class="stat"><div class="n">${META.priorities.A}</div><div class="l">${T('priority')} A</div></div>
+    <div class="stat"><div class="n">${META.families.length}</div><div class="l">Family</div></div>
+  </div>
+  <h2>⭐ ${T('topA')}</h2>
+  <div class="grid">${DB.filter(s=>s.priority==='A').sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,8).map(card).join('')}</div>
+  <h2>⛰️ ${T('hill')}</h2><p>${T('hillDesc')}</p>
+  <div class="grid">${hill.slice(0,4).map(card).join('')}</div>
+  <p><a href="#/hillstream">${T('explore')} →</a></p>`;
+}
+let F = {q:'', rarity:'', breeding:'', priority:'', origin:'', hill:false, photo:false};
+function vBrowse(){
+  const rar = [...new Set(DB.map(s=>s.rarity))].sort();
+  const br = [...new Set(DB.map(s=>s.breeding_potential).filter(Boolean))].sort();
+  app.innerHTML = `<h1>🔍 ${T('browse')}</h1>
+  <div class="toolbar">
+    <input type="search" id="fq" placeholder="${T('search')}" value="${esc(F.q)}">
+    <select id="fr"><option value="">${T('rarity')}: ${T('all')}</option>${rar.map(r=>`<option ${F.rarity===r?'selected':''}>${r}</option>`).join('')}</select>
+    <select id="fb"><option value="">${T('breeding')}: ${T('all')}</option>${br.map(r=>`<option ${F.breeding===r?'selected':''}>${r}</option>`).join('')}</select>
+    <select id="fp"><option value="">${T('priority')}: ${T('all')}</option>${['A','B','C'].map(r=>`<option ${F.priority===r?'selected':''}>${r}</option>`).join('')}</select>
+    <select id="fo"><option value="">${T('origin')}: ${T('all')}</option>
+      <option value="N" ${F.origin==='N'?'selected':''}>${T('native')}</option>
+      <option value="E" ${F.origin==='E'?'selected':''}>${T('exotic')}</option></select>
+    <label><input type="checkbox" id="fh" ${F.hill?'checked':''}> ${T('hillOnly')}</label>
+    <label><input type="checkbox" id="fph" ${F.photo?'checked':''}> ${T('photoOnly')}</label>
+  </div>
+  <p class="count" id="fcount"></p><div class="grid" id="fgrid"></div>`;
+  const upd = ()=>{
+    F = {q: fq.value, rarity: fr.value, breeding: fb.value, priority: fp.value, origin: fo.value, hill: fh.checked, photo: fph.checked};
+    const q = F.q.toLowerCase();
+    const list = DB.filter(s =>
+      (!q || (s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')+' '+s.family+' '+s.genus).toLowerCase().includes(q)) &&
+      (!F.rarity || s.rarity===F.rarity) && (!F.breeding || s.breeding_potential===F.breeding) &&
+      (!F.priority || s.priority===F.priority) &&
+      (!F.origin || (F.origin==='N' ? s.native_status==='Native' : s.native_status!=='Native')) &&
+      (!F.hill || s.hill_stream) && (!F.photo || s.image.thumb || s.image.url));
+    fcount.textContent = `${list.length} ${T('showing')}`;
+    fgrid.innerHTML = list.map(card).join('') || `<p>${T('noPhoto')}</p>`;
+  };
+  for(const id of ['fq','fr','fb','fp','fo','fh','fph']) document.getElementById(id).addEventListener('input', upd);
+  upd();
+}
+function vHill(){
+  const list = DB.filter(s=>s.hill_stream);
+  app.innerHTML = `<h1>⛰️ ${T('hill')} (${list.length})</h1><p>${T('hillDesc')}</p><div class="grid">${list.map(card).join('')}</div>`;
+}
+function fieldRows(sp){
+  let h = '';
+  for(const f of ORDER){
+    let txt = '', fb = false;
+    if(lang==='bn' && sp.bn[f]) txt = sp.bn[f];
+    else if(sp.en[f] && sp.en[f].text){ txt = sp.en[f].text; fb = lang==='bn'; }
+    if(!txt || txt.toLowerCase()==='unknown') continue;
+    const conf = sp.en[f] && sp.en[f].confidence ? ` <span class="conf">[${esc(sp.en[f].confidence)}]</span>` : '';
+    h += `<tr><td>${secLabel(f)}</td><td>${esc(txt)}${conf}${fb?` <span class="conf">${T('fallback')}</span>`:''}</td></tr>`;
+  }
+  return h ? `<table class="fields">${h}</table>` : '';
+}
+function vSpecies(sn){
+  const sp = DB.find(s=>s.serial===sn);
+  if(!sp){ app.innerHTML = '<p>Not found</p>'; return; }
+  const prev = DB.find(s=>s.serial===sn-1), next = DB.find(s=>s.serial===sn+1);
+  let h = `<h1><span class="sci">${esc(sp.scientific_name)}</span>${sp.bengali_name?` <span style="font-size:18px">(${esc(sp.bengali_name)})</span>`:''}</h1>
+  <p style="color:var(--grey)">${esc(sp.english_common_name||'')} · ${esc(sp.family)} · ${esc(sp.order)}</p>
+  ${badges(sp)}
+  <div class="detail"><div>
+    <div class="photoBox">${sp.image.thumb?`<img src="${sp.image.thumb}" alt="">`:sp.image.url?`<p><a href="${esc(sp.image.url)}" target="_blank" rel="noopener">${T('source')} ↗</a></p>`:`<div class="nophoto">${T('noPhoto')}</div>`}</div>
+    <div class="credit">${T('photoBy')}: ${esc(sp.image.photographer||'n/a')} · ${T('license')}: ${esc(sp.image.license||'—')}${sp.image.page_url?` · <a href="${esc(sp.image.page_url)}" target="_blank" rel="noopener">${T('source')}</a>`:''}</div>
+    <div class="facts"><b>${T('facts')}</b>
+      <div><b>${T('genus')}:</b> <span class="sci">${esc(sp.genus)}</span></div>
+      <div><b>${T('maxSize')}:</b> ${sp.max_size_cm?esc(sp.max_size_cm)+' cm':'—'}</div>
+      <div><b>${T('evidence')}:</b> ${esc(sp.evidence_level)}</div>
+      ${sp.synonyms?`<div><b>${T('synonyms')}:</b> <span class="sci">${esc(sp.synonyms)}</span></div>`:''}
+      ${sp.natural_colours.length?`<div><b>${T('colours')}:</b> ${esc(sp.natural_colours.join(', '))}</div>`:''}
+      ${sp.captive_morphs.length?`<div><b>${T('morphs')}:</b> ${esc(sp.captive_morphs.join('; '))}</div>`:''}
+    </div></div>
+    <div>${fieldRows(sp)}`;
+  if(sp.hill_stream && Object.keys(sp.en_hill).length){
+    h += `<div class="hillbox"><b>⛰️ ${T('hillNotes')}.</b><br>`;
+    for(const [k,v] of Object.entries(sp.en_hill)){
+      const txt = (lang==='bn' && sp.bn_hill[k]) ? sp.bn_hill[k] : v.text;
+      h += `<b>${lang==='bn'?(HILL_BN[k]||k):k.replace(/_/g,' ')}:</b> ${esc(txt)}<br>`;
+    }
+    h += `</div>`;
+  }
+  const refs = [...new Set(ORDER.flatMap(f=>sp.en[f]?sp.en[f].references:[]))].slice(0,8);
+  if(refs.length) h += `<h3>${T('refs')}</h3><p style="font-size:13px">${refs.map(r=>{const m=r.match(/https?:\/\/\S+/);return m?`<a href="${m[0]}" target="_blank" rel="noopener">${esc(r.slice(0,90))}</a>`:esc(r.slice(0,120));}).join('<br>')}</p>`;
+  h += `</div></div><div class="pager"><span>${prev?`<a href="#/species/${prev.serial}">${T('prev')}: <span class="sci">${esc(prev.scientific_name)}</span></a>`:''}</span><span>${next?`<a href="#/species/${next.serial}"><span class="sci">${esc(next.scientific_name)}</span> :${T('next')}</a>`:''}</span></div>`;
+  app.innerHTML = h;
+  window.scrollTo(0,0);
+}
+function vPriority(){
+  const mk = p => DB.filter(s=>s.priority===p).sort((a,b)=>(b.score||0)-(a.score||0));
+  const row = s => `<tr><td>${s.serial}</td><td><a href="#/species/${s.serial}"><span class="sci">${esc(s.scientific_name)}</span></a></td><td>${esc(s.bengali_name||'')}</td><td>${s.score??'—'}</td><td>${s.rarity}</td></tr>`;
+  app.innerHTML = `<h1>⭐ ${T('prio')}</h1>
+  <h2><span class="badge b-A">A</span> — ${mk('A').length}</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('A').map(row).join('')}</table>
+  <h2><span class="badge b-B">B</span> — ${mk('B').length}</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('B').map(row).join('')}</table>
+  <h2><span class="badge b-P">C</span> — ${T('consP')} (${mk('C').length})</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('C').map(row).join('')}</table>`;
+}
+const DIST = ["Khagrachari","Bandarban","Rangamati","Sylhet","Moulvibazar","Habiganj","Chattogram","Cox's Bazar","Noakhali","Cumilla","Feni","Lakshmipur","Dhaka"];
+function vDistricts(){
+  app.innerHTML = `<h1>📍 ${T('distIndex')}</h1><div class="distgrid">${DIST.map(d=>`<a href="#/district/${encodeURIComponent(d)}">${d}</a>`).join('')}</div>`;
+}
+function vDistrict(name){
+  const list = DB.filter(s=>(s.districts||'').toLowerCase().includes(name.toLowerCase()));
+  app.innerHTML = `<h1>📍 ${esc(name)} <span style="color:var(--grey);font-size:16px">(${list.length} ${T('recorded')})</span></h1><div class="grid">${list.map(card).join('')}</div>`;
+}
+function vAbout(){
+  app.innerHTML = `<h1>ℹ️ ${T('aboutT')}</h1>
+  <p>${lang==='bn'
+    ? '৪টি ধাপে ১৪৭টি যাচাইকৃত প্রজাতির তথ্য সংকলিত: (১) Master Species Discovery — ১৫৬ প্রার্থী থেকে ডুপ্লিকেট বাদে ১৪৭; (২) ১৭-বিভাগের বৈজ্ঞানিক প্রোফাইল, প্রতিটি তথ্যে confidence ট্যাগ; (৩) বাস্তব আলোকচিত্র (উৎস/লাইসেন্সসহ), colour morph ও breeding গবেষণা; (৪) ৭-মানদণ্ডের weighted scoring — অগ্রাধিকার A/B/C। R1/R2 পাহাড়ি প্রজাতি কখনো বাণিজ্যিক A পায় না।'
+    : 'Compiled in 4 stages for 147 verified species: (1) Master Species Discovery — 156 candidates deduplicated to 147; (2) 17-section scientific profiles with confidence tags; (3) real photographs (sourced/licensed), colour morph & breeding research; (4) 7-criterion weighted scoring → Priority A/B/C. R1/R2 hill-stream species never receive commercial Priority A.'}</p>
+  <h2>Data</h2>
+  <p>${lang==='bn'?'সব তথ্য <code>data/species.json</code>-এ — সরাসরি এডিট করা যায়, কোনো build ধাপ নেই। প্রতিটি প্রজাতির দ্বিভাষিক markdown <code>md/</code> ফোল্ডারে।':'All data lives in <code>data/species.json</code> — edit directly, no build step. Bilingual markdown per species in <code>md/</code>.'}</p>
+  <h2>Image Credits</h2>
+  <p>${lang==='bn'?'ছবির উৎস ও লাইসেন্স প্রতিটি প্রজাতি-পৃষ্ঠায় দেওয়া আছে। পুনঃব্যবহারের আগে উৎস-পৃষ্ঠায় লাইসেন্স যাচাই করুন।':'Photo source & license on each species page. Verify the license on the source page before reuse.'}</p>`;
+}
+
+/* ---------- router ---------- */
+function route(){
+  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.remove('on'));
+  const h = location.hash || '#/';
+  const [,page,arg] = h.split('/');
+  const nav = {undefined:'home','browse':'browse','hillstream':'hillstream','priority':'priority','districts':'districts','district':'districts','about':'about'}[page]||'home';
+  const el = document.querySelector(`[data-nav="${nav}"]`); if(el) el.classList.add('on');
+  try{
+    if(page==='browse') vBrowse();
+    else if(page==='hillstream') vHill();
+    else if(page==='species') vSpecies(+arg);
+    else if(page==='priority') vPriority();
+    else if(page==='districts') vDistricts();
+    else if(page==='district') vDistrict(decodeURIComponent(arg||''));
+    else if(page==='about') vAbout();
+    else vHome();
+  }catch(e){ app.innerHTML = `<div class="err">Error: ${esc(e.message)}</div>`; }
+}
+function setLang(l){ lang=l; localStorage.setItem('fe_lang',l);
+  document.getElementById('langBn').classList.toggle('on',l==='bn');
+  document.getElementById('langEn').classList.toggle('on',l==='en');
+  document.getElementById('brandTitle').textContent = T('brand'); route(); }
+
+async function init(){
+  document.getElementById('langBn').onclick = ()=>setLang('bn');
+  document.getElementById('langEn').onclick = ()=>setLang('en');
+  document.getElementById('langBn').classList.toggle('on',lang==='bn');
+  document.getElementById('langEn').classList.toggle('on',lang==='en');
+  document.getElementById('brandTitle').textContent = T('brand');
+  try{
+    const [s,m] = await Promise.all([
+      fetch('data/species.json').then(r=>{if(!r.ok)throw new Error('species.json');return r.json();}),
+      fetch('data/meta.json').then(r=>{if(!r.ok)throw new Error('meta.json');return r.json();})]);
+    DB = s; META = m;
+  }catch(e){
+    app.innerHTML = `<div class="err"><b>Data load failed.</b><br>
+      ${lang==='bn'?'এই পেজটি সরাসরি ফাইল হিসেবে খুললে ডেটা লোড হয় না। টার্মিনালে প্রজেক্ট ফোল্ডারে গিয়ে চালান:':'If you opened this file directly, data cannot load. In a terminal, go to the project folder and run:'}
+      <pre>cd fish-encyclopedia-web\npython3 -m http.server 8000</pre>
+      ${lang==='bn'?'তারপর ব্রাউজারে খুলুন:':'Then open:'} <code>http://localhost:8000</code></div>`;
+    return;
+  }
+  window.addEventListener('hashchange', route);
+  route();
+}
+init();

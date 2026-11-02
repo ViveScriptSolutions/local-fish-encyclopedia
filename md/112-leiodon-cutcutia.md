@@ -1,0 +1,108 @@
+# 112. Leiodon cutcutia
+
+**বাংলা নাম:** টেপা (Tepa)
+**Common name:** Ocellated pufferfish
+**Family:** Tetraodontidae | **Genus:** Leiodon | **Order:** Tetraodontiformes
+**Rarity:** C | **Breeding:** Experimental | **Priority:** B
+**Synonyms:** Tetraodon cutcutia Hamilton, 1822; Tetrodon cutcutia; Monotretus cutcutia (Hamilton, 1822); Leisomus cutcutia (Hamilton, 1822); Tetrodon caria Hamilton, 1822; Tetrodon gularis Hamilton, 1822; Monotreta gularis (Hamilton, 1822); Leisomus marmoratus Swainson, 1839
+**Photo:** [source](https://www.fishbase.se/FieldGuide/FieldGuideSummary.php?genusname=Leiodon&speciesname=cutcutia&c_code=356) (see source)
+
+## বাংলায়
+
+### শনাক্তকরণ
+
+ছোট pufferfish, ১৫ cm পর্যন্ত, স্পষ্ট উল্লম্ব ডোরা, ধাতব সোনালি-সবুজ ঝিলিক ও ocellated eye-spot-সহ; হুমকিতে শরীর ফুলাতে সক্ষম। Carinotetraodon dwarf puffer (অনেক ছোট) ও সামুদ্রিক puffer থেকে স্বাদু/লোনা অভ্যাস ও ডোরা-নকশা দ্বারা পৃথক। বাংলাদেশের সব স্বাদু-পানির puffer বিষাক্ত — কখনো খাদ্য-মাছ নয়।
+
+### দৈহিক বৈশিষ্ট্য
+
+সর্বোচ্চ আকার ১৫ cm TL; সাধারণ দৈর্ঘ্য ১০ cm TL (FishBase)। মাংসাশী, fin-nipping স্বভাব। Toxin profile: বাংলাদেশি নমুনায় paralytic shellfish toxin বহন করে (উল্লেখযোগ্যভাবে saxitoxin ও analogue, একটি novel carbamoyl-N-methylsaxitoxin সহ); ত্বক সবচেয়ে বিষাক্ত টিস্যু; এই পপুলেশনে tetrodotoxin পাওয়া যায়নি। Toxin মাত্রা অঞ্চল, ঋতু, টিস্যু ও খাদ্য অনুযায়ী পরিবর্তিত হয়।
+
+### আবাসস্থল
+
+বন্য: পুকুর, বিল, খাল ও নদীতে demersal; স্বাদু থেকে লোনা; potamodromous। নিম্ন ও মধ্য Mekong-এর মাঝারি থেকে বড় নদীর পাশাপাশি দক্ষিণ এশীয় প্লাবনভূমির পানিতে পাওয়া যায়; বাংলাদেশে সারা দেশের পুকুর, বিল, খাল, নদী ও অন্যান্য জলাশয়ে (যেমন ছোট যমুনা নদী)।
+
+### বাংলাদেশে বিস্তৃতি
+
+সারা বাংলাদেশ: দেশজুড়ে পুকুর, বিল, খাল, নদী ও অন্যান্য জলাশয়, ছোট যমুনা নদীসহ। বাংলাদেশে স্বাদু-পানির puffer-বিষক্রিয়া প্রাদুর্ভাব এই প্রজাতি খাওয়ার সাথে যুক্ত।
+
+### দক্ষিণ এশিয়ায় বিস্তৃতি
+
+ভারত, বাংলাদেশ, Sri Lanka, Myanmar ও Malay Archipelago; Mekong থেকে রেকর্ডকৃত। Type locality: গঙ্গা নদী, ভারত/বাংলাদেশ (Hamilton, ১৮২২)।
+
+### পানির পরামিতি
+
+বন্য (FishBase): স্বাদু/লোনা, demersal, potamodromous; pH প্রায় ৭.০; dH প্রায় ১০; ক্রান্তীয় ২৪–২৮ C। AQUARIUM (Pufferfish Enthusiasts Worldwide care sheet): তাপমাত্রা ২৪–২৮ C, pH প্রায় ৬.৫–৭.৫; প্রচুর লুকানোর জায়গাসহ ঘন রোপিত ট্যাংক ও মাঝারি স্রোত; species-only বা সতর্কভাবে বাছা ট্যাংক-সঙ্গী (কুখ্যাত fin-nipper)।
+
+### খাদ্য ও আচরণ
+
+অতি শিকারি মাংসাশী: শামুক ও জলজ পোকা এবং larva প্রাকৃতিক খাদ্য; captive-এ শামুক, ছোট crustacean ও অন্যান্য invertebrate নেয়, সাধারণত জীবন্ত ও সম্ভবত হিমায়িত খাদ্য প্রয়োজন এবং শুকনো খাদ্য প্রত্যাখ্যান করে। আক্রমণাত্মক fin-nipper; একা বা species ট্যাংকে conspecific-দের সাথে রাখা ভালো।
+
+### প্রজনন
+
+Hormone injection-এ captive breeding সফল (Doi et al. ২০২২, Aquaculture Science ৭০(১): ৯–১৫, ভারতীয় stock): প্রজনন-আচরণ পর্যবেক্ষিত; ডিম গোলাকার, স্বচ্ছ, demersal ও আঠালো, ব্যাস ১.৪২ ± ০.০৭ mm, ছোট হলুদ oil globule-সহ; ফোটা larva ২.৩৮–৩.১২ mm, খোলা মুখসহ; ১৩ দিনে juvenile (৪.৭৭ mm SL); hormonal induction-এ captive-এ বছরব্যাপী প্রজনন সম্ভব। Karmakar & Biswas (২০১৪) Assam-এর Meleng নদী থেকে প্রজনন-জীববিজ্ঞান ও পুরুষের ডিম-যত্ন নথিভুক্ত করেছেন। বাংলাদেশ থেকে uninduced প্রাকৃতিক প্রজনন-তথ্য নেই।
+
+### সংরক্ষণ অবস্থা
+
+IUCN global: Least Concern (মূল্যায়ন ১১ অক্টোবর ২০০৯)। IUCN Bangladesh Red List ২০১৫: Least Concern (Tetraodon cutcutia হিসেবে তালিকাভুক্ত)। কোনো বড় হুমকি চিহ্নিত নয়; বিষাক্ত বলে মৎস্য-প্রজাতি নয়। জনস্বাস্থ্য-প্রাসঙ্গিকতা: বাংলাদেশে স্বাদু-পানির puffer-বিষক্রিয়া প্রাদুর্ভাব এটি খাওয়ার বিপদ তুলে ধরে — কখনো খাদ্য হিসেবে উপস্থাপন করবেন না। সুপারিশ: বিষাক্ততা নিয়ে জনসচেতনতা; যেকোনো ornamental সংগ্রহ পর্যবেক্ষণ।
+
+### অ্যাকুরিয়াম পরিচর্যা
+
+Medium ornamental সম্ভাবনা; trade-এ মাঝে মাঝে দেখা যায়। Species-ট্যাংক puffer: আক্রমণাত্মক, fin-nipping, জীবন্ত/হিমায়িত খাদ্য প্রয়োজন (beak ক্ষয়ের জন্য শামুক অপরিহার্য — puffer জীববিজ্ঞান থেকে অনুমিত, Low confidence), রোপিত আচ্ছাদন ও লুকানোর জায়গা। ন্যূনতম হ্যান্ডেল করুন; কখনো খাবেন না — paralytic shellfish toxin আছে।
+
+### গবেষণা ঘাটতি
+
+বন্যে প্রাকৃতিক (uninduced) প্রজনন-ecology, fecundity ও larval বিকাশ অগবেষিত; hormone-induction প্রোটোকলের ব্যাপক বৈধতা প্রয়োজন। জনস্বাস্থ্য-নির্দেশনার জন্য বাংলাদেশ পপুলেশনে toxin পরিবর্তনশীলতা (ঋতু, খাদ্য, টিস্যু) পদ্ধতিগত গবেষণা প্রয়োজন। দ্বিতীয় congener L. dapsilis (কিছু catalogue-এ এখন স্বীকৃত) cutcutia-এর তুলনায় বিতরণ-স্পষ্টতা প্রয়োজন।
+
+## In English
+
+### Identification `[High]`
+
+A small pufferfish to 15 cm with bold vertical barring, a metallic golden-green sheen and ocellated eye-spots; capable of inflating the body when threatened. Differs from Carinotetraodon dwarf puffers (much smaller) and marine puffers by its freshwater/brackish habit and barring pattern. All Bangladesh freshwater puffers are poisonous - never a food fish.
+
+### Physical Characteristics `[High]`
+
+Maximum size 15 cm TL; common length 10 cm TL (FishBase). Carnivorous, fin-nipping temperament. Toxin profile: Bangladeshi specimens carry paralytic shellfish toxins (notably saxitoxin and analogues, including a novel carbamoyl-N-methylsaxitoxin); skin is the most toxic tissue; tetrodotoxin was NOT detected in these populations. Toxin levels vary by region, season, tissue and diet.
+
+### Male Vs Female `[Low]`
+
+External sexual dimorphism is not reliably documented for field or aquarium identification. Karmakar & Biswas (2014) studied reproductive biology including sexual dimorphism from the Meleng River, Assam, but distinguishing characters were not extracted in the sources consulted. Low/Unknown.
+
+### Natural Habitat `[High]`
+
+WILD: demersal in ponds, beels, canals and rivers; freshwater to brackish; potamodromous. Occurs in medium to large rivers of the lower and middle Mekong as well as South Asian floodplain waters; in Bangladesh found in ponds, beels, canals, rivers and other water bodies throughout the country (e.g. Choto Jamuna River).
+
+### Bangladesh Distribution `[High]`
+
+Throughout Bangladesh: ponds, beels, canals, rivers and other water bodies countrywide, including the Choto Jamuna River. Freshwater puffer-poisoning outbreaks in Bangladesh are linked to consumption of this species.
+
+### South Asian Distribution `[High]`
+
+India, Bangladesh, Sri Lanka, Myanmar and the Malay Archipelago; recorded from the Mekong. Type locality: Ganges River, India/Bangladesh (Hamilton, 1822).
+
+### Environmental Requirements `[Moderate]`
+
+WILD (FishBase): freshwater/brackish, demersal, potamodromous; pH about 7.0; dH about 10; tropical 24-28 C. AQUARIUM (Pufferfish Enthusiasts Worldwide care sheet): temperature 24-28 C, pH about 6.5-7.5; densely planted tank with plentiful hiding spaces and moderate flow; species-only or carefully chosen tankmates (notorious fin-nipper).
+
+### Feeding And Behaviour `[High]`
+
+Very predatory carnivore: natural diet of snails and aquatic insects and larvae; in captivity takes snails, small crustaceans and other invertebrates, usually requiring live and possibly frozen food and refusing dry foods. Aggressive fin-nipper; best kept alone or with conspecifics in a species tank.
+
+### Breeding And Reproduction `[High]`
+
+Captive breeding achieved via hormone injection (Doi et al. 2022, Aquaculture Science 70(1): 9-15, Indian stock): spawning behaviour observed; eggs spherical, translucent, demersal and adhesive, 1.42 +/- 0.07 mm diameter with small yellow oil globules; hatched larvae 2.38-3.12 mm with open mouths; juveniles at 13 days (4.77 mm SL); breeding possible year-round in captivity with hormonal induction. Karmakar & Biswas (2014) documented reproductive biology and male egg care from Assam's Meleng River. No uninduced natural spawning data from Bangladesh.
+
+### Lifespan And Growth `[Unknown]`
+
+No published age or lifespan data were found.
+
+### Conservation Status `[High]`
+
+IUCN global: Least Concern (assessed 11 October 2009). IUCN Bangladesh Red List 2015: Least Concern (listed as Tetraodon cutcutia). No major threats identified; not a fishery species because it is poisonous. Public-health relevance: freshwater puffer-poisoning outbreaks in Bangladesh highlight the danger of eating it - never present as food. Recommendations: public awareness on toxicity; monitor any ornamental collection.
+
+### Captive Care Notes `[Moderate]`
+
+Medium ornamental potential; appears occasionally in the trade. Species-tank puffer: aggressive, fin-nipping, needs live/frozen foods (snails essential for beak wear - inferred from puffer biology, Low confidence), planted cover and hiding places. Handle minimally; never consume - paralytic shellfish toxins present.
+
+### Research Gaps `[High]`
+
+Natural (uninduced) spawning ecology, fecundity and larval development in the wild are unstudied; hormone-induction protocols need wider validation. Toxin variability across Bangladesh populations (season, diet, tissue) needs systematic study for public-health guidance. The second congener L. dapsilis (now recognized in some catalogues) needs distributional clarification relative to cutcutia.

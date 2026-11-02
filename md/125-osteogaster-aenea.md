@@ -1,0 +1,115 @@
+# 125. Osteogaster aenea
+
+**Common name:** Bronze corydoras
+**Family:** Callichthyidae | **Genus:** Osteogaster | **Order:** Siluriformes
+**Rarity:** E | **Breeding:** High | **Priority:** 
+**Synonyms:** Hoplosoma aeneum; Corydoras aeneus; Corydoras venezuelanus; Osteogaster aeneus
+**Photo:** [not stated](https://www.aquaportail.com/especes/taxonomie/famille/3/callichthyidae) (not stated)
+
+## বাংলায়
+
+### শনাক্তকরণ
+
+আঁশের বদলে দুই সারি bony পার্শ্ব-plate, ছোট barbel ও brassy bronze-green ঝিলিকসহ মজবুত armoured catfish, নিচে ফ্যাকাশে। অন্যান্য 'aeneus group' taxa-এর সাথে সহজে বিভ্রান্ত হয় (যেমন সবুজ 'laser cory' CW009, gold laser CW010, Osteogaster eques, O. rabauti); বিভিন্ন locality-এর অনুরূপ-নকশার মাছ সম্ভবত আলাদা প্রজাতি প্রতিনিধিত্ব করে। Aquarium 'black' strain যা নিয়মিত ভুল-লেবেলে 'C. schultzei' বা 'C. venezuelanus' হিসেবে চিহ্নিত, O. aenea-এর line-bred melanistic form, বৈধ আলাদা প্রজাতি নয়।
+
+### দৈহিক বৈশিষ্ট্য
+
+সর্বোচ্চ প্রায় ৭৫ mm standard length; cory হিসেবে গভীর-শরীর, bony plate-এর সারি, brassy bronze থেকে golden-green শরীর-রং ও ফ্যাকাশে পেটসহ। পাখনা সরল; pectoral কাঁটা শক্ত। Selectively bred captive form-এর মধ্যে albino, longfin, melanistic 'black' strain ও mutated short-bodied মাছ আছে; কৃত্রিমভাবে রং করা নমুনাও trade-এ বিক্রি হয়েছে।
+
+### পুরুষ ও স্ত্রী
+
+স্ত্রী বড় হয় এবং পুরুষের চেয়ে লক্ষণীয়ভাবে গোলাকার ও চওড়া-শরীর, বিশেষত gravid অবস্থায়; উপর থেকে দেখলে, পরিপক্ব স্ত্রী pectoral অঞ্চল জুড়ে চওড়া। পুরুষ ছোট ও সরু।
+
+### আবাসস্থল
+
+Trinidad থেকে বর্ণিত (type locality 'Trinidad Island, West Indies'), যেখানে এটি এখনও দ্বীপের মধ্য ও দক্ষিণ অংশের কিছু নদী-ব্যবস্থায় আছে। এটি বর্তমানে Colombia ও Trinidad থেকে দক্ষিণে Rio de la Plata drainage পর্যন্ত গৃহীত, তবে SeriouslyFish ও সাম্প্রতিক লেখকরা জোর দেন এই বিশাল বিস্তৃতি প্রায় নিশ্চিতভাবে একটি প্রজাতির বদলে অনুরূপ, আলাদা taxa-এর complex প্রতিনিধিত্ব করে। আবাসস্থল ধীর-স্রোতের নদী, ঝিরি ও প্লাবনভূমির পানি, প্রায়ই dissolved oxygen-এ কম।
+
+### বাংলাদেশে বিস্তৃতি
+
+বাংলাদেশের native নয় — তুলনামূলক aquarium অধ্যায়ের জন্য অন্তর্ভুক্ত। পরামর্শকৃত উৎসে বাংলাদেশে এই প্রজাতির কোনো নথিভুক্ত introduced বা feral পপুলেশন পাওয়া যায়নি; বাংলাদেশে trade মাছ, অন্যত্রের মতো, ইতিমধ্যে domesticated lineage-এর বাণিজ্যিক farm stock।
+
+### দক্ষিণ এশিয়ায় বিস্তৃতি
+
+Native বিস্তৃতি শুধু দক্ষিণ আমেরিকা: গৃহীত রেকর্ড Argentina, Bolivia, Brazil, Colombia, French Guiana, Guyana, Paraguay, Peru, Suriname, Trinidad and Tobago ও Venezuela জুড়ে — যদিও SeriouslyFish নোট করে এটি প্রায় নিশ্চিতভাবে কয়েকটি cryptic taxa-কে মিলিয়ে ফেলে এবং শুধু Trinidad মাছ আত্মবিশ্বাসের সাথে O. aenea sensu stricto। এটি পুরো Asia-এর জন্য exotic।
+
+### পানির পরামিতি
+
+বন্য: ধীর ক্রান্তীয় নদী, ঝিরি ও প্লাবনভূমিতে বাস; এটি facultative air breather, বায়ুমণ্ডলীয় oxygen গ্রাসের জন্য modified, অত্যন্ত vascularised intestine-সহ, oxygen-দরিদ্র পানিতে বেঁচে থাকতে দেয় — পদ্ধতিগত প্রকাশিত বন্য pH/তাপমাত্রা-বিস্তৃতি sparse। AQUARIUM: SeriouslyFish অনুযায়ী ২১–২৭ C, pH ৬.০–৮.০, hardness ২–১৫ dGH; পানি পরিষ্কার থাকলে এই বিস্তৃতিতে hardy।
+
+### খাদ্য ও আচরণ
+
+প্রকৃতিতে foraging সর্বভুক, benthic invertebrate ও detritus নেয়; aquarium-এ বেশিরভাগ sinking শুকনো খাদ্য সাথে bloodworm ও Tubifex-এর মতো ছোট জীবন্ত ও হিমায়িত variety গ্রহণ করে, বৈচিত্র্যময় খাদ্য মাছকে সর্বোত্তম অবস্থায় রাখে। শান্ত ও দলবদ্ধ — অন্তত ৪–৬টি রাখুন। মাঝে মাঝে বাতাস গ্রাস করতে পৃষ্ঠে ওঠে, যা স্বাভাবিক আচরণ।
+
+### প্রজনন
+
+Courtship সুপরিচিত 'T-position' ব্যবহার করে: পুরুষ তার abdomen স্ত্রীর কাছে উপস্থাপন করে, যে তার মুখ তার genital opening-এ আটকে দেয়, sperm গ্রহণ করে, এবং ডিম sperm-সহ একসাথে তার pelvic পাখনা দিয়ে গঠিত থলিতে পাঠায়, আঠালো ডিম কাঁচ, উদ্ভিদ বা spawning mop-এ জমা করে। Protein-সমৃদ্ধ জীবন্ত বা হিমায়িত খাদ্যে প্রজননকারী condition করুন এবং বড় (৫০–৭০%) ঠান্ডা-water change সাথে বর্ধিত aeration দিয়ে spawning trigger করুন, spawning পর্যন্ত দৈনিক পুনরাবৃত্তি, আদর্শভাবে প্রতি স্ত্রীতে দুই পুরুষ। Incubation ৩–৪ দিন এবং yolk sac শোষিত হলে fry microworm ও Artemia nauplii গ্রহণ করে; spawning-এর পর প্রাপ্তবয়স্ক বা ডিম সরিয়ে নিন। Albino strain wild form-এর মতোই প্রজনন করে।
+
+### আয়ু ও বৃদ্ধি
+
+ভালোভাবে রাখা aquarium-এ সাধারণত ৫ বা বেশি বছর বাঁচে, প্রায় ১০ বছর পর্যন্ত দীর্ঘায়ু রিপোর্ট করা হয়েছে। বৃদ্ধি মাঝারি; ভালো খাওয়ানোতে প্রায় এক বছরের মধ্যে juvenile প্রায় ৭৫ mm standard length-এর প্রাপ্তবয়স্ক আকারে পৌঁছায়।
+
+### সংরক্ষণ অবস্থা
+
+Globally Least Concern হিসেবে মূল্যায়িত (IUCN ২০২২, Corydoras aeneus হিসেবে তালিকাভুক্ত), এর অতি বিস্তৃত গৃহীত বিস্তৃতি প্রতিফলিত করে। সতর্কতা: বর্তমানে সংজ্ঞায়িত হিসেবে এটি একটি species complex, তাই LC রেটিং একাধিক cryptic taxa কভার করে — complex-এর মধ্যে পৃথক lineage আরও স্থানীয় হুমকির মুখে থাকতে পারে (Hypothesis)। Complex-এর জন্য কোনো বড় range-wide হুমকি চিহ্নিত নয়।
+
+### অ্যাকুরিয়াম পরিচর্যা
+
+দীর্ঘমেয়াদি ন্যূনতম ট্যাংক প্রায় ৮০ x ৩০ cm (~৭২ litre); মিহি বালি ব্যবহার করুন, বা নিখুঁত পরিষ্কার রাখা গোল gravel, যেহেতু খালি তলার তুলনায় পাতলা বালি রোগ-সংবেদনশীলতা কমায়। ২১–২৭ C, pH ৬.০–৮.০, hardness ২–১৫ dGH-এ tetra ও rasbora-এর মতো শান্ত ট্যাংক-সঙ্গীসহ অন্তত ৪–৬ দল রাখুন। Sinking শুকনো খাদ্য সাথে জীবন্ত বা হিমায়িত bloodworm ও Tubifex খাওয়ান — কখনো আশা করবেন না তারা ট্যাংক-সঙ্গীর উচ্ছিষ্টে বাঁচবে বা aquarium 'পরিষ্কার' করবে। কৃত্রিমভাবে রং করা ও short-bodied mutant এড়িয়ে চলুন; শক্ত pectoral কাঁটা ত্বক ছিদ্র করতে পারে এবং axillary gland secretion মৃদু বিষাক্ত হতে পারে বলে সাবধানে হ্যান্ডেল করুন।
+
+### গবেষণা ঘাটতি
+
+অগ্রাধিকার-gap species complex সমাধান: বাণিজ্যিক bloodline O. aenea sensu stricto (Trinidad) প্রতিনিধিত্ব করে নাকি cryptic taxa-এর মিশ্রণ। প্রকৃত Trinidad form-এর বন্য ecology (খাদ্য, spawning ঋতুতা, পানির রসায়ন) দুর্বলভাবে প্রকাশিত, এবং দশক-পুরনো farm strain-এর genetic composition অজানা।
+
+## In English
+
+### Identification `[High]`
+
+A robust armoured catfish with two rows of bony lateral plates instead of scales, short barbels and a brassy bronze-green sheen, pale below. It is easily confused with other 'aeneus group' taxa (e.g. the green 'laser cory' CW009, gold laser CW010, Osteogaster eques, O. rabauti); similar-patterned fish from different localities probably represent distinct species. The aquarium 'black' strain routinely mislabelled 'C. schultzei' or 'C. venezuelanus' is a line-bred melanistic form of O. aenea, not a valid separate species.
+
+### Physical Characteristics `[High]`
+
+Maximum about 75 mm standard length; deep-bodied for a cory with rows of bony plates, brassy bronze to golden-green body colour and a pale belly. Fins are plain; pectoral spines are stiffened. Selectively bred captive forms include albino, longfin, a melanistic 'black' strain and mutated short-bodied fish; artificially dyed specimens have also been sold in the trade.
+
+### Male Vs Female `[High]`
+
+Females grow larger and are noticeably rounder and broader-bodied than males, especially when gravid; viewed from above, mature females are broader across the pectoral region. Males are smaller and slimmer.
+
+### Natural Habitat `[Moderate]`
+
+Described from Trinidad (type locality 'Trinidad Island, West Indies'), where it still occurs in some river systems of central and southern parts of the island. It is currently accepted from Colombia and Trinidad south to the Rio de la Plata drainage, but SeriouslyFish and recent authors stress this vast range almost certainly represents a complex of similar, distinct taxa rather than one species. Habitat is slow-moving rivers, streams and floodplain waters, often low in dissolved oxygen.
+
+### Bangladesh Distribution `[Low]`
+
+Not native to Bangladesh - included for the comparative aquarium chapter. No documented introduced or feral populations of this species in Bangladesh were found in the sources consulted; trade fish in Bangladesh, as elsewhere, are commercial farm stock of an already domesticated lineage.
+
+### South Asian Distribution `[High]`
+
+Native range is South America only: accepted records span Argentina, Bolivia, Brazil, Colombia, French Guiana, Guyana, Paraguay, Peru, Suriname, Trinidad and Tobago and Venezuela - though SeriouslyFish notes this almost certainly conflates several cryptic taxa and only Trinidad fish are confidently O. aenea sensu stricto. It is exotic to all of Asia.
+
+### Environmental Requirements `[Moderate]`
+
+WILD: inhabits slow tropical rivers, streams and floodplains; it is a facultative air breather with a modified, highly vascularised intestine for gulping atmospheric oxygen, allowing survival in oxygen-poor water - systematic published wild pH/temperature ranges are sparse. AQUARIUM: 21-27 C, pH 6.0-8.0, hardness 2-15 dGH per SeriouslyFish; hardy across this range provided water is clean.
+
+### Feeding And Behaviour `[High]`
+
+A foraging omnivore in nature, taking benthic invertebrates and detritus; in aquaria it accepts most sinking dried foods plus small live and frozen varieties such as bloodworm and Tubifex, with a varied diet keeping fish in optimum condition. Peaceful and gregarious - keep at least 4-6 individuals. Occasionally rises to the surface to gulp air, which is normal behaviour.
+
+### Breeding And Reproduction `[High]`
+
+Courtship uses the well-known 'T-position': the male presents his abdomen to the female, who attaches her mouth to his genital opening, takes in sperm, and passes eggs together with sperm into a pouch formed by her pelvic fins, depositing the sticky eggs on glass, plants or spawning mops. Condition breeders on protein-rich live or frozen foods and trigger spawning with a large (50-70%) cooler-water change plus increased aeration, repeated daily until spawning, ideally with two males per female. Incubation is 3-4 days and fry accept microworm and Artemia nauplii once the yolk sac is absorbed; remove adults or eggs after spawning. The albino strain breeds identically to the wild form.
+
+### Lifespan And Growth `[Moderate]`
+
+Typically lives 5 or more years in well-kept aquaria, with longevity up to about 10 years reported. Growth is moderate; juveniles reach the adult size of roughly 75 mm standard length within about a year under good feeding.
+
+### Conservation Status `[High]`
+
+Globally assessed as Least Concern (IUCN 2022, listed as Corydoras aeneus), reflecting its very wide accepted range. Caveat: as presently defined it is a species complex, so the LC rating covers multiple cryptic taxa - individual lineages within the complex could face more localised threats (Hypothesis). No major range-wide threats are identified for the complex.
+
+### Captive Care Notes `[High]`
+
+Minimum long-term tank is about 80 x 30 cm (~72 litres); use fine sand, or rounded gravel kept scrupulously clean, since thin sand reduces disease susceptibility versus bare bottom. Keep groups of at least 4-6 with peaceful tankmates such as tetras and rasboras at 21-27 C, pH 6.0-8.0, hardness 2-15 dGH. Feed sinking dried foods plus live or frozen bloodworm and Tubifex - never expect them to survive on tank-mates' leftovers or to 'clean' the aquarium. Avoid artificially dyed and short-bodied mutants; handle with care since the stiffened pectoral spines can pierce skin and axillary gland secretions may be mildly venomous.
+
+### Research Gaps `[High]`
+
+The priority gap is resolving the species complex: whether commercial bloodlines represent O. aenea sensu stricto (Trinidad) or a mix of cryptic taxa. Wild ecology of the true Trinidad form (diet, spawning seasonality, water chemistry) is poorly published, and the genetic composition of decades-old farm strains is unknown.

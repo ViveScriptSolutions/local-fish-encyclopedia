@@ -1,0 +1,116 @@
+# 54. Amblyceps mangois (Hamilton, 1822)
+
+**বাংলা নাম:** Amu/Khudi Magur (Sarker et al. 2022, Sylhet)
+**Common name:** Indian torrent catfish
+**Family:** Amblycipitidae | **Genus:** Amblyceps | **Order:** Siluriformes
+**Rarity:** R4 | **Breeding:** Low | **Priority:** A
+**Synonyms:** Pimelodus mangois Hamilton, 1822
+**Photo:** [source](https://fishbase.se/photos/PicturesSummary.php?resultPage=4&ID=24792&what=species) (see source)
+
+## বাংলায়
+
+### শনাক্তকরণ
+
+একটি লম্বাটে, ছোট-দেহের স্রোত-ক্যাটফিশ (torrent catfish), সর্বোচ্চ 12.5 cm SL (FishBase)। উপরে জলপাই-বাদামি ও পেটে হালকা, চওড়া ভোঁতা মাথায় কয়েক সেট লম্বা শুঁড়সহ। শনাক্তকারী (Ng, FishBase অনুযায়ী): তুলনামূলক খাটো দেহে 34-36টি কশেরুকা (কয়েকটি সমগণীয় প্রজাতিতে 38-40-এর বিপরীতে); পুচ্ছ পাখনার উপরের ও নিচের খণ্ড স্পষ্ট ভিন্ন আকৃতির; বক্ষ-কাঁটা (pectoral spine) মসৃণ। বক্ষীয় আঠালো অঙ্গ না থাকায় Glyptothorax ও Pseudolaguvia থেকে আলাদা। Aquarium-এর নমুনা সাধারণত 9-12.5 cm।
+
+### দৈহিক বৈশিষ্ট্য
+
+সর্বোচ্চ 12.5 cm SL (FishBase)। দেহ লম্বাটে ও নলাকার, জলপাই-বাদামি পিঠ, ফ্যাকাশে পেট, চওড়া ভোঁতা মাথা ও লম্বা শুঁড়সহ; পুচ্ছ পাখনা দ্বিখণ্ডিত, অসদৃশ খণ্ডসহ। গণের চিরাচরিত adipose পাখনা রয়েছে। প্রাপ্তবয়স্কের সাধারণ আকার প্রায় 9-12.5 cm।
+
+### পুরুষ ও স্ত্রী
+
+অজানা। Amblyceps mangois-এ যৌন দ্বিরূপতা নথিভুক্ত করে এমন কোনো প্রকাশিত বিবরণ নেই।
+
+### আবাসস্থল
+
+পাহাড়ের পাদদেশে দ্রুত স্রোতের নুড়ি-বিছানায় এবং দ্রুত-প্রবাহী উচ্চভূমির ঝিরির তলদেশে পাথর ও বোল্ডারের মধ্যে পাওয়া যায় (FishBase)। নিম্নভূমির চলন বিল জলাভূমি থেকেও রেকর্ড রয়েছে, যেখানে এটি বিরল (Galib et al. 2009), তাই এটি কঠোর স্রোত-বাধ্যতামূলক (torrent obligate) নয়। মিঠাপানিতে তলদেশ-মধ্যপানিবাসী (benthopelagic)। কিছু নিম্নভূমির উপস্থিতিসহ hill-stream-এর সঙ্গে দৃঢ়ভাবে যুক্ত।
+
+### বাংলাদেশে বিস্তৃতি
+
+উত্তর ও পূর্ব বাংলাদেশ জুড়ে ভালোভাবে বিস্তৃত: সিলেটের সংগ্রামপুঞ্জির কাছে পিয়ান গাং (ডাহুকি নদী); পঞ্চগড়ের তেঁতুলিয়ার কাছে মহানন্দা নদী; রংপুরের বদরগঞ্জের কাছে যবুনেশ্বরী নদী; নেত্রকোনার কংস ও সোমেশ্বরী নদী; এবং কক্সবাজারের পাঁচারা (FishBase country info)। নিম্নভূমির চলন বিল থেকেও রেকর্ড রয়েছে, যেখানে এটি বিরল (Galib et al. 2009)। master database-এ প্রমাণ Confirmed Hill-stream Record হিসেবে কোড করা।
+
+### দক্ষিণ এশিয়ায় বিস্তৃতি
+
+এশিয়া: পাকিস্তান থেকে থাইল্যান্ড (FishBase)। মূলত গঙ্গা অববাহিকা থেকে বর্ণিত; ভারতে (কৃষ্ণা নদী পর্যন্ত দক্ষিণে রেকর্ডসহ), নেপাল ও বাংলাদেশে ব্যাপকভাবে বিস্তৃত বলে গণ্য (PlanetCatfish)।
+
+### পানির পরামিতি
+
+বন্য: নুড়ি ও গোল-পাথরের তলদেশের উপর ঠান্ডা, দ্রুত, ভালোভাবে অক্সিজেনযুক্ত উচ্চভূমির ঝিরি; পদ্ধতিগতভাবে পরিমাপকৃত বন্য water parameters প্রকাশিত নেই। Trade ও hobbyist ডেটাসেটে pH 6.4-7.4 এবং তাপমাত্রা 15-22 C রেকর্ড রয়েছে (PlanetCatfish/AquaticRepublic, ব্যবহারকারী-প্রদত্ত তথ্য, Moderate-Low confidence)। AQUARIUM (trade literature): তাপমাত্রা প্রায় 18-23 C, pH প্রায় 6.5-7.5, ভালো স্রোতসহ উচ্চ dissolved oxygen।
+
+### খাদ্য ও আচরণ
+
+বন্য খাদ্য জলজ পোকামাকড় নিয়ে গঠিত (FishBase)। Aquarium-এ এটি জীবন্ত বা হিমায়িত কৃমি ও ছোট অমেরুদণ্ডী পছন্দ করে, এবং pellets ও flakes গ্রহণ করতে পারে (Aquarium Wiki)। আচরণ: নিশাচর ও লাজুক, বালুতে গর্ত করে ও নুড়ির মধ্যে লুকায়; 'biting catfish' নাম ট্যাংক-সঙ্গীদের প্রতি কামড়ানোর প্রবণতা প্রতিফলিত করে। একজন অভিজ্ঞ পালক উল্লেখ করেন hill-stream ক্যাটফিশদের মধ্যে এটি অস্বাভাবিক সহনশীল এবং আদর্শ স্রোত ও অক্সিজেনায়ন ছাড়াই চলতে পারে, যদিও সেগুলোসহ সবচেয়ে ভালো থাকে।
+
+### প্রজনন
+
+অজানা। প্রজনন মৌসুম, ডিম পাড়ার আচরণ, ডিম, উর্বরতা, পরিপক্বতা বা সন্তান-যত্ন সম্পর্কে কোনো প্রকাশিত তথ্য নেই, এবং captive breeding-এর প্রতিবেদন নেই।
+
+### আয়ু ও বৃদ্ধি
+
+আয়ুষ্কাল বা বৃদ্ধি সম্পর্কে কোনো বৈজ্ঞানিক তথ্য নেই। Trade literature 5-10 বছর দাবি করে (The Aquarium Wiki); অযাচাইকৃত।
+
+### সংরক্ষণ অবস্থা
+
+বৈশ্বিক: Least Concern (IUCN, মূল্যায়ন 1 October 2009)। বাংলাদেশ: Least Concern (IUCN Bangladesh 2015)। জনসংখ্যার প্রবণতা অজানা। বাজারে দেখা যায় না (FishBase), তাই লক্ষ্যভিত্তিক মৎস্য-চাপ নেই। হুমকি নথিভুক্ত নয়; hill-stream আবাসস্থলের অবক্ষয় সম্ভাব্য চাপ। বর্তমান জ্ঞানে লক্ষ্যভিত্তিক সংরক্ষণ ব্যবস্থার ইঙ্গিত নেই।
+
+### অ্যাকুরিয়াম পরিচর্যা
+
+একজন অভিজ্ঞ পালকের বর্ণনায় hill-stream ক্যাটফিশদের মধ্যে সবচেয়ে সহজগুলোর একটি (PlanetCatfish)। ঠান্ডা (প্রায় 18-23 C), উচ্চ অক্সিজেনযুক্ত পানি ও ভালো স্রোতসহ প্রায় 75 L বা বড় ট্যাংক ব্যবহার করুন; গর্তের জন্য বালু এবং নুড়ি ও গোল-পাথরের আচ্ছাদন দিন। Trade উৎস pH প্রায় 7.0-7.5 সুপারিশ করে। জীবন্ত বা হিমায়িত কৃমি ও ছোট অমেরুদণ্ডী খাওয়ান; pellets ও flakes গ্রহণ করতে পারে। শান্ত তবে কামড়াতে পারে, তাই অতি ছোট বা লম্বা-পাখনার সঙ্গী এড়িয়ে চলুন। উল্লেখযোগ্য যে, বেশিরভাগ স্রোত-ক্যাটফিশের তুলনায় এটি আদর্শের চেয়ে কম স্রোত ও dissolved oxygen ভালোভাবে সহ্য করে। সমস্ত নির্দেশনা trade literature।
+
+### গবেষণা ঘাটতি
+
+প্রজনন, বৃদ্ধি, আয়ুষ্কাল এবং বন্য পানির রসায়ন নথিভুক্ত নয়। প্রজাতির স্রোত-ঝিরির খ্যাতি বিবেচনায় নিম্নভূমির চলন বিলে উপস্থিতির বাস্তুতান্ত্রিক ব্যাখ্যা প্রয়োজন। বাংলাদেশে ব্যাপক বিস্তৃতি সত্ত্বেও জনসংখ্যার প্রবণতা পর্যবেক্ষণহীন।
+
+## In English
+
+### Identification `[High]`
+
+An elongate, small-bodied torrent catfish, maximum 12.5 cm SL (FishBase). Olive-brown above and lighter on the belly, with a broad blunt head bearing several sets of long barbels. Diagnostic (Ng, via FishBase): relatively short body with 34-36 vertebrae (versus 38-40 in several congeners); caudal fin with upper and lower lobes of distinctly different shapes; pectoral spine smooth. It differs from Glyptothorax and Pseudolaguvia in lacking a thoracic adhesive apparatus. Aquarium specimens are typically 9-12.5 cm.
+
+### Physical Characteristics `[High]`
+
+Maximum 12.5 cm SL (FishBase). The body is elongate and cylindrical with an olive-brown back, paler belly, broad blunt head, and long barbels; the caudal fin is forked with dissimilar lobes. An adipose fin is present, typical of the family. Typical adult size is about 9-12.5 cm.
+
+### Male Vs Female `[Unknown]`
+
+Unknown. No published account documents sexual dimorphism in Amblyceps mangois.
+
+### Natural Habitat `[High]`
+
+Occurs in pebbly beds in swift currents at the base of hills, and among rocks and boulders on the bottom of fast-flowing upland streams (FishBase). It is also recorded from the lowland Chalan Beel wetland, where it is rare (Galib et al. 2009), so it is not a strict torrent obligate. Benthopelagic in freshwater. A strong hill-stream associate with some lowland occurrence.
+
+### Bangladesh Distribution `[High]`
+
+Well distributed across northern and eastern Bangladesh: Piyan gang (Dahuki river) near Sangrampunji in Sylhet; Mahananda river near Tetulia in Panchagarh; Jabuneswari river near Badarganj in Rangpur; Kangsha and Someswari rivers in Netrokona; and Panchara in Cox's Bazar (FishBase country info). Also recorded from the lowland Chalan Beel, where it is rare (Galib et al. 2009). The master database codes the evidence as Confirmed Hill-stream Record.
+
+### South Asian Distribution `[High]`
+
+Asia: Pakistan to Thailand (FishBase). Originally described from the Ganges drainage; considered widely distributed in India (with records as far south as the Krishna river), Nepal, and Bangladesh (PlanetCatfish).
+
+### Environmental Requirements `[Moderate]`
+
+WILD: cool, swift, well-oxygenated upland streams over pebble and cobble substrates; no systematically measured wild parameters are published. Trade and hobbyist datasets record pH 6.4-7.4 and temperature 15-22 C (PlanetCatfish/AquaticRepublic, user-contributed data, Moderate-Low confidence). AQUARIUM (trade literature): temperature about 18-23 C, pH about 6.5-7.5, high dissolved oxygen with good current.
+
+### Feeding And Behaviour `[Moderate]`
+
+Wild diet consists of aquatic insects (FishBase). In the aquarium it likes live or frozen worms and small invertebrates, and may accept pellets and flakes (Aquarium Wiki). Behaviour: nocturnal and secretive, burrowing in sand and hiding among pebbles; the 'biting catfish' name reflects nippiness toward tankmates. An experienced keeper notes it is unusually tolerant among hillstream catfishes and can do without ideal flow and oxygenation, though it does best with them.
+
+### Breeding And Reproduction `[Unknown]`
+
+Unknown. No published data exist on spawning season, spawning behaviour, eggs, fecundity, maturity, or parental care, and captive breeding has not been reported.
+
+### Lifespan And Growth `[Low]`
+
+No scientific data on lifespan or growth. Trade literature claims 5-10 years (The Aquarium Wiki); unverified.
+
+### Conservation Status `[High]`
+
+Global: Least Concern (IUCN, assessed 1 October 2009). Bangladesh: Least Concern (IUCN Bangladesh 2015). Population trend is unknown. It is not seen in markets (FishBase), so there is no targeted fishery pressure. Threats are undocumented; hill-stream habitat degradation is a plausible pressure. No targeted conservation measures are indicated at current knowledge.
+
+### Captive Care Notes `[Moderate]`
+
+Described by an experienced keeper as among the easiest hillstream catfishes (PlanetCatfish). Use a tank of about 75 L or larger with cool (about 18-23 C), highly oxygenated water and a good current; provide sand for burrowing plus pebble and cobble cover. Trade sources suggest pH about 7.0-7.5. Feed live or frozen worms and small invertebrates; pellets and flakes may be accepted. Peaceful but may nip, so avoid tiny or long-finned tankmates. Notably, it tolerates less-than-ideal flow and dissolved oxygen better than most torrent catfishes. All guidance is trade literature.
+
+### Research Gaps `[High]`
+
+Reproduction, growth, lifespan, and wild water chemistry are undocumented. The lowland Chalan Beel occurrence needs ecological explanation given the species' torrent-stream reputation. Population trends are unmonitored despite the wide Bangladesh distribution.
