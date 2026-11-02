@@ -24,9 +24,10 @@ fish-encyclopedia-web/
 ├── js/app.js           # অ্যাপ লজিক (search, filter, routing)
 ├── data/
 │   ├── species.json    # ★★ মূল ডেটা — ১৪৭ প্রজাতি (EN + BN)
+│   ├── images.json     # ★ ছবির manifest — ফাইলনাম, বিবরণ, alt text, লাইসেন্স
 │   └── meta.json       # পরিসংখ্যান
 ├── md/                 # ১৪৭টি দ্বিভাষিক markdown ফাইল (001-*.md … 147-*.md)
-├── assets/thumbs/      # ৭৮টি লোকাল ছবি (বাকিগুলো source URL-এ লিংক)
+├── assets/thumbs/      # ৭৮টি অপ্টিমাইজড ছবি (বর্ণনামূলক ফাইলনাম, যেমন 032-oryzias-carnaticus.jpg)
 └── README.md
 ```
 

@@ -14,7 +14,8 @@ const STR = {
     distIndex:'জেলা-ভিত্তিক সূচক', recorded:'টি রেকর্ডকৃত প্রজাতি',
     brand:'বাংলাদেশের ছোট ও শোভাবর্ধক মাছ', sub:'১৪৭টি যাচাইকৃত প্রজাতির সচিত্র বৈজ্ঞানিক বিশ্বকোষ',
     explore:'ঘুরে দেখুন', hillDesc:'খাগড়াছড়ি, বান্দরবান, রাঙ্গামাটি ও সিলেটের ঝিরি-ছড়ার বিরল মাছ',
-    aboutT:'গবেষণা পদ্ধতি', fallback:'(বাংলা অনুবাদ নেই — English পাঠ দেখানো হচ্ছে)'},
+    aboutT:'গবেষণা পদ্ধতি', fallback:'(বাংলা অনুবাদ নেই — English পাঠ দেখানো হচ্ছে)',
+    photos:'ছবিসহ প্রজাতি'},
   en: {home:'Home', browse:'Species', hill:'Hill-stream', prio:'Priority', dist:'Districts', about:'About',
     search:'Search (scientific / Bengali / common name, family)…', all:'All', rarity:'Rarity', breeding:'Breeding',
     priority:'Priority', origin:'Origin', native:'Native', exotic:'Exotic', hillOnly:'Hill-stream only', photoOnly:'With photo',
@@ -26,7 +27,8 @@ const STR = {
     distIndex:'District index', recorded:'recorded species',
     brand:'Small & Ornamental Fishes of Bangladesh', sub:'Illustrated scientific encyclopedia · 147 verified species',
     explore:'Explore', hillDesc:'Rare fishes of the hill streams of Khagrachari, Bandarban, Rangamati & Sylhet',
-    aboutT:'Research methodology', fallback:''}
+    aboutT:'Research methodology', fallback:'',
+    photos:'Species with photos'},
 };
 const SEC_BN = {identification:'শনাক্তকরণ', physical_characteristics:'দৈহিক বৈশিষ্ট্য',
   male_vs_female:'পুরুষ ও স্ত্রী', natural_habitat:'আবাসস্থল', bangladesh_distribution:'বাংলাদেশে বিস্তৃতি',
@@ -49,12 +51,15 @@ const app = document.getElementById('app');
 function badges(sp){
   let h = `<span class="badge b-${sp.rarity}">${sp.rarity}</span>`;
   if(sp.breeding_potential) h += ` <span class="badge" style="background:#5b7fa6">${lang==='bn'?'ব্রিডিং':'Breeding'}: ${esc(sp.breeding_potential)}</span>`;
-  if(sp.priority) h += ` <span class="badge b-${sp.priority}">${lang==='bn'?'অগ্রাধিকার':'Priority'} ${sp.priority}</span>`;
+  if(sp.priority) h += ` <span class="badge ${sp.priority==='IE'?'b-IE':'b-'+sp.priority}">${lang==='bn'?'অগ্রাধিকার':'Priority'} ${sp.priority}</span>`;
   if(sp.native_status!=='Native') h += ` <span class="badge b-E">EXOTIC</span>`;
   return `<div class="badges">${h}</div>`;
 }
-function thumb(sp, cls){
-  if(sp.image.thumb) return `<img src="${sp.image.thumb}" alt="${esc(sp.scientific_name)}" loading="lazy">`;
+function altText(sp){
+  return sp.image.alt || `${sp.scientific_name}${sp.english_common_name?` (${sp.english_common_name})`:''} — photograph`;
+}
+function thumb(sp){
+  if(sp.image.thumb) return `<img src="${sp.image.thumb}" alt="${esc(altText(sp))}" loading="lazy" onerror="this.outerHTML='<div class=&quot;nophoto&quot;>${T('noPhoto')}</div>'">`;
   return `<div class="nophoto">${T('noPhoto')}</div>`;
 }
 function card(sp){
@@ -72,7 +77,7 @@ function vHome(){
   <div class="statgrid">
     <div class="stat"><div class="n">${META.total}</div><div class="l">${T('species')}</div></div>
     <div class="stat"><div class="n">${META.hill_stream}</div><div class="l">${T('hill')}</div></div>
-    <div class="stat"><div class="n">${META.with_photo}</div><div class="l">${T('photoOnly').replace('শুধু ','').replace('With ','')}</div></div>
+    <div class="stat"><div class="n">${META.with_photo}</div><div class="l">${T('photos')}</div></div>
     <div class="stat"><div class="n">${META.priorities.A}</div><div class="l">${T('priority')} A</div></div>
     <div class="stat"><div class="n">${META.families.length}</div><div class="l">Family</div></div>
   </div>
@@ -138,7 +143,7 @@ function vSpecies(sn){
   <p style="color:var(--grey)">${esc(sp.english_common_name||'')} · ${esc(sp.family)} · ${esc(sp.order)}</p>
   ${badges(sp)}
   <div class="detail"><div>
-    <div class="photoBox">${sp.image.thumb?`<img src="${sp.image.thumb}" alt="">`:sp.image.url?`<p><a href="${esc(sp.image.url)}" target="_blank" rel="noopener">${T('source')} ↗</a></p>`:`<div class="nophoto">${T('noPhoto')}</div>`}</div>
+    <div class="photoBox">${sp.image.thumb?`<img src="${sp.image.thumb}" alt="${esc(altText(sp))}" onerror="this.outerHTML='<div class=&quot;nophoto&quot;>${T('noPhoto')}</div>'">`:sp.image.url?`<p><a href="${esc(sp.image.url)}" target="_blank" rel="noopener">${T('source')} ↗</a></p>`:`<div class="nophoto">${T('noPhoto')}</div>`}</div>
     <div class="credit">${T('photoBy')}: ${esc(sp.image.photographer||'n/a')} · ${T('license')}: ${esc(sp.image.license||'—')}${sp.image.page_url?` · <a href="${esc(sp.image.page_url)}" target="_blank" rel="noopener">${T('source')}</a>`:''}</div>
     <div class="facts"><b>${T('facts')}</b>
       <div><b>${T('genus')}:</b> <span class="sci">${esc(sp.genus)}</span></div>
@@ -166,10 +171,12 @@ function vSpecies(sn){
 function vPriority(){
   const mk = p => DB.filter(s=>s.priority===p).sort((a,b)=>(b.score||0)-(a.score||0));
   const row = s => `<tr><td>${s.serial}</td><td><a href="#/species/${s.serial}"><span class="sci">${esc(s.scientific_name)}</span></a></td><td>${esc(s.bengali_name||'')}</td><td>${s.score??'—'}</td><td>${s.rarity}</td></tr>`;
+  const ie = mk('IE');
   app.innerHTML = `<h1>⭐ ${T('prio')}</h1>
   <h2><span class="badge b-A">A</span> — ${mk('A').length}</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('A').map(row).join('')}</table>
   <h2><span class="badge b-B">B</span> — ${mk('B').length}</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('B').map(row).join('')}</table>
-  <h2><span class="badge b-P">C</span> — ${T('consP')} (${mk('C').length})</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('C').map(row).join('')}</table>`;
+  <h2><span class="badge b-P">C</span> — ${T('consP')} (${mk('C').length})</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${mk('C').map(row).join('')}</table>
+  ${ie.length?`<h2><span class="badge b-IE">IE</span> — ${lang==='bn'?'অপর্যাপ্ত প্রমাণ (Insufficient Evidence)':'Insufficient Evidence'} (${ie.length})</h2><table class="list"><tr><th>#</th><th>Species</th><th>বাংলা</th><th>Score</th><th>R</th></tr>${ie.map(row).join('')}</table>`:''}`;
 }
 const DIST = ["Khagrachari","Bandarban","Rangamati","Sylhet","Moulvibazar","Habiganj","Chattogram","Cox's Bazar","Noakhali","Cumilla","Feni","Lakshmipur","Dhaka"];
 function vDistricts(){
@@ -209,11 +216,13 @@ function route(){
   }catch(e){ app.innerHTML = `<div class="err">Error: ${esc(e.message)}</div>`; }
 }
 function setLang(l){ lang=l; localStorage.setItem('fe_lang',l);
+  document.documentElement.lang = l==='bn'?'bn':'en';
   document.getElementById('langBn').classList.toggle('on',l==='bn');
   document.getElementById('langEn').classList.toggle('on',l==='en');
   document.getElementById('brandTitle').textContent = T('brand'); route(); }
 
 async function init(){
+  document.documentElement.lang = lang==='bn'?'bn':'en';
   document.getElementById('langBn').onclick = ()=>setLang('bn');
   document.getElementById('langEn').onclick = ()=>setLang('en');
   document.getElementById('langBn').classList.toggle('on',lang==='bn');
