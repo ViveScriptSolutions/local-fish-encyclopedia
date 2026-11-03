@@ -196,6 +196,15 @@ function evidenceSection(sp){
   h += `</table>`;
   return h;
 }
+function galleryHTML(sp){
+  if(!sp.gallery || !sp.gallery.length) return '';
+  const items = sp.gallery.map(g=>`
+    <a class="gitem" href="${esc(g.url||g.thumb||'#')}" target="_blank" rel="noopener">
+      ${g.thumb?`<img src="${g.thumb}" alt="${esc(g.alt||g.view||'')}" loading="lazy" onerror="this.outerHTML='<div class=&quot;nophoto sm&quot;>${T('noPhoto')}</div>'">`:`<div class="nophoto sm">${esc(g.view||'')}</div>`}
+      <div class="gcap"><b>${esc(g.view||'')}</b>${g.id_confidence?` <span class="conf">[${esc(g.id_confidence)}]</span>`:''}<br><span class="gsrc">📷 ${esc(g.photographer||'n/a')}${g.license?` · ${esc(g.license)}`:''}</span></div>
+    </a>`).join('');
+  return `<h3>🖼️ ${lang==='bn'?'ছবি গ্যালারি':'Image gallery'} (${sp.gallery.length})</h3><div class="gallery">${items}</div>`;
+}
 function vSpecies(sn){
   const sp = DB.find(s=>s.serial===sn);
   if(!sp){ app.innerHTML = '<p>Not found</p>'; return; }
@@ -206,11 +215,13 @@ function vSpecies(sn){
   <div class="detail"><div>
     <div class="photoBox">${sp.image.thumb?`<img src="${sp.image.thumb}" alt="${esc(altText(sp))}" onerror="this.outerHTML='<div class=&quot;nophoto&quot;>${T('noPhoto')}</div>'">`:sp.image.url?`<p><a href="${esc(sp.image.url)}" target="_blank" rel="noopener">${T('source')} ↗</a></p>`:`<div class="nophoto">${T('noPhoto')}</div>`}</div>
     <div class="credit">${T('photoBy')}: ${esc(sp.image.photographer||'n/a')} · ${T('license')}: ${esc(sp.image.license||'—')}${sp.image.page_url?` · <a href="${esc(sp.image.page_url)}" target="_blank" rel="noopener">${T('source')}</a>`:''}</div>
+    ${galleryHTML(sp)}
     <div class="facts"><b>${T('facts')}</b>
       <div><b>${T('genus')}:</b> <span class="sci">${esc(sp.genus)}</span></div>
       <div><b>${T('maxSize')}:</b> ${sp.max_size_cm?esc(sp.max_size_cm)+' cm':'—'}</div>
       <div><b>${T('evidence')}:</b> ${esc(sp.evidence_level)}</div>
       ${sp.synonyms?`<div><b>${T('synonyms')}:</b> <span class="sci">${esc(sp.synonyms)}</span></div>`:''}
+      ${sp.regional_names?`<div><b>${lang==='bn'?'আঞ্চলিক নাম':'Regional names'}:</b> ${esc(sp.regional_names)}</div>`:''}
       ${sp.natural_colours.length?`<div><b>${T('colours')}:</b> ${esc(sp.natural_colours.join(', '))}</div>`:''}
       ${sp.captive_morphs.length?`<div><b>${T('morphs')}:</b> ${esc(sp.captive_morphs.join('; '))}</div>`:''}
     </div></div>
