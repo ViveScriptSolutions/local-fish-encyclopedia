@@ -201,7 +201,7 @@ function galleryHTML(sp){
   const items = sp.gallery.map(g=>`
     <a class="gitem" href="${esc(g.url||g.thumb||'#')}" target="_blank" rel="noopener">
       ${g.thumb?`<img src="${g.thumb}" alt="${esc(g.alt||g.view||'')}" loading="lazy" onerror="this.outerHTML='<div class=&quot;nophoto sm&quot;>${T('noPhoto')}</div>'">`:`<div class="nophoto sm">${esc(g.view||'')}</div>`}
-      <div class="gcap"><b>${esc(g.view||'')}</b>${g.id_confidence?` <span class="conf">[${esc(g.id_confidence)}]</span>`:''}<br><span class="gsrc">📷 ${esc(g.photographer||'n/a')}${g.license?` · ${esc(g.license)}`:''}</span></div>
+      <div class="gcap"><b>${esc(g.view||'')}</b>${g.id_confidence?` <span class="conf">[${esc(g.id_confidence)}]</span>`:''}<br><span class="gsrc">${g.is_illustration?'🎨':'📷'} ${esc(g.photographer||'n/a')}${g.license?` · ${esc(g.license)}`:''}</span></div>
     </a>`).join('');
   return `<h3>🖼️ ${lang==='bn'?'ছবি গ্যালারি':'Image gallery'} (${sp.gallery.length})</h3><div class="gallery">${items}</div>`;
 }
