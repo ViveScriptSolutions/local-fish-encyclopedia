@@ -115,6 +115,8 @@ function secLabel(f){ return lang==='bn' ? (SEC_BN[f]||f) : f.replace(/_/g,' ').
 function vHome(){
   const hill = DB.filter(s=>s.hill_stream);
   const v = d => DB.filter(s=>s.ver && ['verified','confirmed','checked'].includes(s.ver[d])).length;
+  // prefer species with photos for the home previews (better first impression)
+  const photoFirst = l => [...l].sort((a,b)=>((b.image.thumb?1:0)-(a.image.thumb?1:0)) || ((b.score||0)-(a.score||0)));
   app.innerHTML = `<h1>${T('brand')}</h1><p>${T('sub')}</p>
   <div class="statgrid">
     <div class="stat"><div class="n">${META.total}</div><div class="l">${T('species')}</div></div>
@@ -126,9 +128,9 @@ function vHome(){
   </div>
   <p style="font-size:13px;color:var(--grey)">${T('lastRev')}: ${fmtDate(META.last_reviewed)} · ${T('collNote')}</p>
   <h2>⭐ ${T('topA')}</h2>
-  <div class="grid">${DB.filter(s=>s.priority==='A').sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,8).map(card).join('')}</div>
+  <div class="grid">${photoFirst(DB.filter(s=>s.priority==='A')).slice(0,8).map(card).join('')}</div>
   <h2>⛰️ ${T('hill')}</h2><p>${T('hillDesc')}</p>
-  <div class="grid">${hill.slice(0,4).map(card).join('')}</div>
+  <div class="grid">${photoFirst(hill).slice(0,4).map(card).join('')}</div>
   <p><a href="#/hillstream">${T('explore')} →</a></p>`;
 }
 let F = {q:'', rarity:'', breeding:'', priority:'', origin:'', family:'', habitat:'', ver:'', hill:false, photo:false};
@@ -322,7 +324,9 @@ function vAbout(){
     ? '৪টি ধাপে ১৪৭টি যাচাইকৃত প্রজাতির তথ্য সংকলিত: (১) Master Species Discovery — ১৫৬ প্রার্থী থেকে ডুপ্লিকেট বাদে ১৪৭; (২) ১৭-বিভাগের বৈজ্ঞানিক প্রোফাইল, প্রতিটি তথ্যে confidence ট্যাগ; (৩) বাস্তব আলোকচিত্র (উৎস/লাইসেন্সসহ), colour morph ও breeding গবেষণা; (৪) ৭-মানদণ্ডের weighted scoring — অগ্রাধিকার A/B/C। R1/R2 পাহাড়ি প্রজাতি কখনো বাণিজ্যিক A পায় না।'
     : 'Compiled in 4 stages for 147 verified species: (1) Master Species Discovery — 156 candidates deduplicated to 147; (2) 17-section scientific profiles with confidence tags; (3) real photographs (sourced/licensed), colour morph & breeding research; (4) 7-criterion weighted scoring → Priority A/B/C. R1/R2 hill-stream species never receive commercial Priority A.'}</p>
   <h2>Data</h2>
-  <p>${lang==='bn'?'সব তথ্য <code>data/species.json</code>-এ — সরাসরি এডিট করা যায়, কোনো build ধাপ নেই। প্রতিটি প্রজাতির দ্বিভাষিক markdown <code>md/</code> ফোল্ডারে।':'All data lives in <code>data/species.json</code> — edit directly, no build step. Bilingual markdown per species in <code>md/</code>.'}</p>
+  <p>${lang==='bn'
+    ? 'তথ্যের উৎস research database — <code>build_web_data.py</code> থেকে ওয়েব-ডেটা তৈরি হয়। অ্যাপটি প্রথমে হালকা <code>data/species-index.json</code> লোড করে, প্রতিটি প্রজাতির পূর্ণ প্রোফাইল (<code>data/species/NNN.json</code>) প্রয়োজনমতো লোড হয়। প্রতিটি প্রজাতির দ্বিভাষিক markdown <code>docs/species-md/</code> ফোল্ডারে।'
+    : 'Data is generated from the research database via <code>build_web_data.py</code>. The app first loads a lightweight <code>data/species-index.json</code>; each full species profile (<code>data/species/NNN.json</code>) loads on demand. Bilingual markdown per species in <code>docs/species-md/</code>.'}</p>
   <h2>Image Credits</h2>
   <p>${lang==='bn'?'ছবির উৎস ও লাইসেন্স প্রতিটি প্রজাতি-পৃষ্ঠায় দেওয়া আছে। পুনঃব্যবহারের আগে উৎস-পৃষ্ঠায় লাইসেন্স যাচাই করুন।':'Photo source & license on each species page. Verify the license on the source page before reuse.'}</p>`;
 }
