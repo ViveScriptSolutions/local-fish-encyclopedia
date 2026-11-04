@@ -1,5 +1,14 @@
-/* Fish Encyclopedia — client app. Data: data/species.json (edit it, no build step). */
+/* Fish Encyclopedia — client app. Data: data/species-index.json (light) + data/species/NNN.json (lazy full profiles). */
 let DB = [], META = {};
+const FULL = {}; // serial -> full profile, lazy-loaded
+async function getFull(sn){
+  if(!FULL[sn]){
+    const r = await fetch(`data/species/${String(sn).padStart(3,'0')}.json`);
+    if(!r.ok) throw new Error('species '+sn);
+    FULL[sn] = await r.json();
+  }
+  return FULL[sn];
+}
 let lang = localStorage.getItem('fe_lang') || 'bn';
 
 const STR = {
@@ -60,6 +69,24 @@ const ORDER = ['identification','physical_characteristics','male_vs_female','nat
 
 const esc = s => String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const T = k => STR[lang][k];
+const BN_DIG = '০১২৩৪৫৬৭৮৯';
+const MONTH = {
+  bn: {1:'জানুয়ারি',2:'ফেব্রুয়ারি',3:'মার্চ',4:'এপ্রিল',5:'মে',6:'জুন',7:'জুলাই',8:'আগস্ট',9:'সেপ্টেম্বর',10:'অক্টোবর',11:'নভেম্বর',12:'ডিসেম্বর'},
+  en: {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
+};
+function fmtDate(iso){
+  if(!iso) return '';
+  const [y,m,d] = iso.split('-').map(Number);
+  if(!y||!m||!d) return iso;
+  if(lang==='bn') return `${String(d).replace(/\d/g,c=>BN_DIG[c])} ${MONTH.bn[m]} ${String(y).replace(/\d/g,c=>BN_DIG[c])}`;
+  return `${d} ${MONTH.en[m]} ${y}`;
+}
+function footHTML(){
+  const n = lang==='bn' ? String(META.total||'').replace(/\d/g,c=>BN_DIG[c]) : (META.total||'');
+  return lang==='bn'
+    ? `${n}টি প্রজাতি-প্রোফাইল (কিউরেটেড সংগ্রহ) · ${T('lastRev')}: ${fmtDate(META.last_reviewed)} · ছবি মূল উৎসের সম্পত্তি`
+    : `${n} species profiles (curated collection) · ${T('lastRev')}: ${fmtDate(META.last_reviewed)} · Images belong to their sources`;
+}
 const app = document.getElementById('app');
 
 function badges(sp){
@@ -87,17 +114,17 @@ function secLabel(f){ return lang==='bn' ? (SEC_BN[f]||f) : f.replace(/_/g,' ').
 /* ---------- views ---------- */
 function vHome(){
   const hill = DB.filter(s=>s.hill_stream);
-  const v = d => DB.filter(s=>s.verification && s.verification[d] && ['verified','confirmed','checked'].includes(s.verification[d].status)).length;
+  const v = d => DB.filter(s=>s.ver && ['verified','confirmed','checked'].includes(s.ver[d])).length;
   app.innerHTML = `<h1>${T('brand')}</h1><p>${T('sub')}</p>
   <div class="statgrid">
     <div class="stat"><div class="n">${META.total}</div><div class="l">${T('species')}</div></div>
-    <div class="stat"><div class="n">${v('taxonomy')}</div><div class="l">${T('verTax')} ✓</div></div>
-    <div class="stat"><div class="n">${v('bangladesh_occurrence')}</div><div class="l">${T('bdConf')}</div></div>
-    <div class="stat"><div class="n">${v('district_occurrence')}</div><div class="l">${T('distConf')}</div></div>
-    <div class="stat"><div class="n">${DB.filter(s=>s.verification&&s.verification.photograph.status==='missing').length}</div><div class="l">${T('photoMiss')}</div></div>
+    <div class="stat"><div class="n">${v('tax')}</div><div class="l">${T('verTax')} ✓</div></div>
+    <div class="stat"><div class="n">${v('bd')}</div><div class="l">${T('bdConf')}</div></div>
+    <div class="stat"><div class="n">${v('dist')}</div><div class="l">${T('distConf')}</div></div>
+    <div class="stat"><div class="n">${DB.filter(s=>s.ver&&s.ver.photo==='missing').length}</div><div class="l">${T('photoMiss')}</div></div>
     <div class="stat"><div class="n">${META.families.length}</div><div class="l">Family</div></div>
   </div>
-  <p style="font-size:13px;color:var(--grey)">${T('lastRev')}: 3 November 2026 · ${T('collNote')}</p>
+  <p style="font-size:13px;color:var(--grey)">${T('lastRev')}: ${fmtDate(META.last_reviewed)} · ${T('collNote')}</p>
   <h2>⭐ ${T('topA')}</h2>
   <div class="grid">${DB.filter(s=>s.priority==='A').sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,8).map(card).join('')}</div>
   <h2>⛰️ ${T('hill')}</h2><p>${T('hillDesc')}</p>
@@ -105,14 +132,6 @@ function vHome(){
   <p><a href="#/hillstream">${T('explore')} →</a></p>`;
 }
 let F = {q:'', rarity:'', breeding:'', priority:'', origin:'', family:'', habitat:'', ver:'', hill:false, photo:false};
-function habitatGroup(s){
-  const t = ((s.en.natural_habitat&&s.en.natural_habitat.text)||'').toLowerCase();
-  if(/hill stream|hill-stream|torrential|rapids|riffle|fast-flow/.test(t)) return 'hill';
-  if(/estuar|mangrove|tidal|brackish|marine|coast|lagoon/.test(t)) return 'estuary';
-  if(/pond|ditch|paddy|beel|haor|wetland|floodplain|swamp|marsh|baor|jheel/.test(t)) return 'wetland';
-  if(/river|stream|canal/.test(t)) return 'river';
-  return 'other';
-}
 function vBrowse(){
   const rar = [...new Set(DB.map(s=>s.rarity))].sort();
   const br = [...new Set(DB.map(s=>s.breeding_potential).filter(Boolean))].sort();
@@ -142,14 +161,14 @@ function vBrowse(){
          family: ffam.value, habitat: fhb.value, ver: fv.value, hill: fh.checked, photo: fph.checked};
     const q = F.q.toLowerCase();
     const list = DB.filter(s =>
-      (!q || (s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')+' '+s.family+' '+s.genus).toLowerCase().includes(q)) &&
+      (!q || (s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')+' '+(s.regional_names||'')+' '+s.family+' '+s.genus).toLowerCase().includes(q)) &&
       (!F.rarity || s.rarity===F.rarity) && (!F.breeding || s.breeding_potential===F.breeding) &&
       (!F.priority || s.priority===F.priority) &&
       (!F.origin || (F.origin==='N' ? s.native_status==='Native' : s.native_status!=='Native')) &&
-      (!F.family || s.family===F.family) && (!F.habitat || habitatGroup(s)===F.habitat) &&
-      (!F.ver || (F.ver==='bd' ? s.verification.bangladesh_occurrence.status==='confirmed'
-                : F.ver==='dist' ? s.verification.district_occurrence.status==='confirmed'
-                : s.verification.photograph.status==='missing')) &&
+      (!F.family || s.family===F.family) && (!F.habitat || s.habitat_group===F.habitat) &&
+      (!F.ver || (F.ver==='bd' ? s.ver.bd==='confirmed'
+                : F.ver==='dist' ? s.ver.dist==='confirmed'
+                : s.ver.photo==='missing')) &&
       (!F.hill || s.hill_stream) && (!F.photo || s.image.thumb || s.image.url));
     fcount.textContent = `${list.length} ${T('showing')}`;
     fgrid.innerHTML = list.map(card).join('') || `<p>${T('noPhoto')}</p>`;
@@ -205,9 +224,14 @@ function galleryHTML(sp){
     </a>`).join('');
   return `<h3>🖼️ ${lang==='bn'?'ছবি গ্যালারি':'Image gallery'} (${sp.gallery.length})</h3><div class="gallery">${items}</div>`;
 }
-function vSpecies(sn){
-  const sp = DB.find(s=>s.serial===sn);
-  if(!sp){ app.innerHTML = '<p>Not found</p>'; return; }
+async function vSpecies(sn){
+  app.innerHTML = `<p class="loading">${lang==='bn'?'লোড হচ্ছে…':'Loading…'}</p>`;
+  try{ renderSpecies(await getFull(sn)); }
+  catch(e){ app.innerHTML = `<div class="err">Error: ${esc(e.message)}</div>`; }
+  window.scrollTo(0,0);
+}
+function renderSpecies(sp){
+  const sn = sp.serial;
   const prev = DB.find(s=>s.serial===sn-1), next = DB.find(s=>s.serial===sn+1);
   let h = `<h1><span class="sci">${esc(sp.scientific_name)}</span>${sp.bengali_name?` <span style="font-size:18px">(${esc(sp.bengali_name)})</span>`:''}</h1>
   <p style="color:var(--grey)">${esc(sp.english_common_name||'')} · ${esc(sp.family)} · ${esc(sp.order)}</p>
@@ -239,7 +263,6 @@ function vSpecies(sn){
   h += evidenceSection(sp);
   h += `</div></div><div class="pager"><span>${prev?`<a href="#/species/${prev.serial}">${T('prev')}: <span class="sci">${esc(prev.scientific_name)}</span></a>`:''}</span><span>${next?`<a href="#/species/${next.serial}"><span class="sci">${esc(next.scientific_name)}</span> :${T('next')}</a>`:''}</span></div>`;
   app.innerHTML = h;
-  window.scrollTo(0,0);
 }
 function vPriority(){
   const mk = p => DB.filter(s=>s.priority===p).sort((a,b)=>(b.score||0)-(a.score||0));
@@ -255,10 +278,14 @@ let CMP = [];
 function vCompare(){
   app.innerHTML = `<h1>⚖️ ${T('compareT')}</h1><p>${T('comparePick')}</p>
   <div class="toolbar"><input type="search" id="cq" placeholder="${T('search')}"></div>
-  <div class="grid" id="cres"></div><div id="ctab"></div>`;
+  <div class="grid" id="cres"></div><div id="ctab" style="overflow-x:auto"></div>`;
   const short = (sp,f,n) => { const t = sp.en[f]&&sp.en[f].text||''; return esc(t.length>n?t.slice(0,n)+'…':t); };
-  const render = ()=>{
+  const render = async ()=>{
     if(!CMP.length){ ctab.innerHTML=''; return; }
+    ctab.innerHTML = `<p class="loading">${lang==='bn'?'লোড হচ্ছে…':'Loading…'}</p>`;
+    const spp = [];
+    for(const sn of CMP){ try{ spp.push(await getFull(sn)); }catch(e){ /* skip */ } }
+    if(!spp.length){ ctab.innerHTML=''; return; }
     const rows = [
       [lang==='bn'?'ছবি':'Photo', sp=>sp.image.thumb?`<img src="${sp.image.thumb}" alt="${esc(altText(sp))}" style="max-width:150px" onerror="this.remove()">`:'—'],
       [lang==='bn'?'বাংলা নাম':'Bengali name', sp=>esc(sp.bengali_name||'—')],
@@ -272,29 +299,22 @@ function vCompare(){
       [secLabel('captive_care_notes'), sp=>short(sp,'captive_care_notes',220)],
       [secLabel('conservation_status'), sp=>short(sp,'conservation_status',220)],
     ];
-    ctab.innerHTML = `<table class="list cmp"><tr><th></th>${CMP.map(sp=>`<th><a href="#/species/${sp.serial}"><span class="sci">${esc(sp.scientific_name)}</span></a><br><button data-rm="${sp.serial}">✕</button></th>`).join('')}</tr>` +
-      rows.map(([l,fn])=>`<tr><td><b>${l}</b></td>${CMP.map(sp=>`<td>${fn(sp)}</td>`).join('')}</tr>`).join('') + `</table>`;
-    ctab.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{CMP=CMP.filter(s=>s.serial!==+b.dataset.rm);render();});
+    ctab.innerHTML = `<table class="list cmp"><tr><th></th>${spp.map(sp=>`<th><a href="#/species/${sp.serial}"><span class="sci">${esc(sp.scientific_name)}</span></a><br><button data-rm="${sp.serial}">✕</button></th>`).join('')}</tr>` +
+      rows.map(([l,fn])=>`<tr><td><b>${l}</b></td>${spp.map(sp=>`<td>${fn(sp)}</td>`).join('')}</tr>`).join('') + `</table>`;
+    ctab.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{CMP=CMP.filter(sn=>sn!==+b.dataset.rm);render();});
   };
   cq.addEventListener('input', ()=>{
     const q = cq.value.toLowerCase().trim();
     if(q.length<2){ cres.innerHTML=''; return; }
-    const list = DB.filter(s=>(s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')).toLowerCase().includes(q))
-      .filter(s=>!CMP.includes(s)).slice(0,6);
+    const list = DB.filter(s=>(s.scientific_name+' '+(s.bengali_name||'')+' '+(s.english_common_name||'')+' '+(s.regional_names||'')).toLowerCase().includes(q))
+      .filter(s=>!CMP.includes(s.serial)).slice(0,6);
     cres.innerHTML = list.map(s=>`<div class="card" style="cursor:pointer" data-add="${s.serial}"><div class="body"><div class="t"><span class="sci">${esc(s.scientific_name)}</span></div><div class="bn">${esc(s.bengali_name||'')}</div></div></div>`).join('');
     cres.querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>{
-      if(CMP.length<4){ CMP.push(DB.find(s=>s.serial===+el.dataset.add)); cq.value=''; cres.innerHTML=''; render(); }
+      const sn = +el.dataset.add;
+      if(CMP.length<4 && !CMP.includes(sn)){ CMP.push(sn); cq.value=''; cres.innerHTML=''; render(); }
     });
   });
   render();
-}
-const DIST = ["Khagrachari","Bandarban","Rangamati","Sylhet","Moulvibazar","Habiganj","Chattogram","Cox's Bazar","Noakhali","Cumilla","Feni","Lakshmipur","Dhaka"];
-function vDistricts(){
-  app.innerHTML = `<h1>📍 ${T('distIndex')}</h1><div class="distgrid">${DIST.map(d=>`<a href="#/district/${encodeURIComponent(d)}">${d}</a>`).join('')}</div>`;
-}
-function vDistrict(name){
-  const list = DB.filter(s=>(s.districts||'').toLowerCase().includes(name.toLowerCase()));
-  app.innerHTML = `<h1>📍 ${esc(name)} <span style="color:var(--grey);font-size:16px">(${list.length} ${T('recorded')})</span></h1><div class="grid">${list.map(card).join('')}</div>`;
 }
 function vAbout(){
   app.innerHTML = `<h1>ℹ️ ${T('aboutT')}</h1>
@@ -312,7 +332,7 @@ function route(){
   document.querySelectorAll('[data-nav]').forEach(a=>a.classList.remove('on'));
   const h = location.hash || '#/';
   const [,page,arg] = h.split('/');
-  const nav = {undefined:'home','browse':'browse','hillstream':'hillstream','priority':'priority','compare':'compare','districts':'districts','district':'districts','about':'about'}[page]||'home';
+  const nav = {undefined:'home','browse':'browse','hillstream':'hillstream','priority':'priority','compare':'compare','about':'about'}[page]||'home';
   const el = document.querySelector(`[data-nav="${nav}"]`); if(el) el.classList.add('on');
   try{
     if(page==='browse') vBrowse();
@@ -320,17 +340,25 @@ function route(){
     else if(page==='species') vSpecies(+arg);
     else if(page==='priority') vPriority();
     else if(page==='compare') vCompare();
-    else if(page==='districts') vDistricts();
-    else if(page==='district') vDistrict(decodeURIComponent(arg||''));
     else if(page==='about') vAbout();
     else vHome();
   }catch(e){ app.innerHTML = `<div class="err">Error: ${esc(e.message)}</div>`; }
+}
+function applyChromeLang(){
+  document.getElementById('brandTitle').textContent = T('brand');
+  const nl = {home:T('home'), browse:T('browse'), hillstream:T('hill'), priority:T('prio'), compare:T('compare'), about:T('about')};
+  for(const [k,v] of Object.entries(nl)){
+    const el = document.getElementById('nl-'+k);
+    if(el) el.textContent = v;
+  }
+  const fn = document.getElementById('footNote');
+  if(fn) fn.textContent = footHTML();
 }
 function setLang(l){ lang=l; localStorage.setItem('fe_lang',l);
   document.documentElement.lang = l==='bn'?'bn':'en';
   document.getElementById('langBn').classList.toggle('on',l==='bn');
   document.getElementById('langEn').classList.toggle('on',l==='en');
-  document.getElementById('brandTitle').textContent = T('brand'); route(); }
+  applyChromeLang(); route(); }
 
 async function init(){
   document.documentElement.lang = lang==='bn'?'bn':'en';
@@ -338,10 +366,9 @@ async function init(){
   document.getElementById('langEn').onclick = ()=>setLang('en');
   document.getElementById('langBn').classList.toggle('on',lang==='bn');
   document.getElementById('langEn').classList.toggle('on',lang==='en');
-  document.getElementById('brandTitle').textContent = T('brand');
   try{
     const [s,m] = await Promise.all([
-      fetch('data/species.json').then(r=>{if(!r.ok)throw new Error('species.json');return r.json();}),
+      fetch('data/species-index.json').then(r=>{if(!r.ok)throw new Error('species-index.json');return r.json();}),
       fetch('data/meta.json').then(r=>{if(!r.ok)throw new Error('meta.json');return r.json();})]);
     DB = s; META = m;
   }catch(e){
@@ -352,6 +379,7 @@ async function init(){
     return;
   }
   window.addEventListener('hashchange', route);
+  applyChromeLang();
   route();
 }
 init();
