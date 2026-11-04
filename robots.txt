@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vivescriptsolutions.github.io/local-fish-encyclopedia/sitemap.xml
